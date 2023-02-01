@@ -3,11 +3,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,400&family=Roboto+Condensed:ital,wght@0,400;0,700;1,400&display=swap"); */
 
 @font-face {
-  font-family: "RobotoCondensed";
+  font-family: "Bebas Neue";
   font-style: normal;
-  font-weight: normal;
-  src: local("RobotoCondensed-Bold"), local("RobotoCondensed-Bold"),
-    url(assets/fonts/RobotoCondensed/RobotoCondensed-Bold.woff2) format("woff2");
+  font-weight: 400;
+  src: local("BebasNeue-Regular"),
+    url("../fonts/BebasNeue-Regular.woff2") format("woff2"),
+    url("../fonts/BebasNeue-Regular.woff") format("woff");
   font-display: swap;
 }
 
@@ -394,22 +395,23 @@ section:nth-child(5) {
 
 .swiper-slide {
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
 
-  background-color: goldenrod;
+  background-color: white;
 
   display: flex;
-  align-items: center;
-  justify-content: center;
+  /* align-items: center;
+  justify-content: center; */
   cursor: grab;
+  padding: 10vh 10vw;
 }
 
-.swiper-slide:nth-child(2) {
+/* .swiper-slide:nth-child(2) {
   background-color: yellow;
 }
 .swiper-slide:nth-child(3) {
   background-color: rebeccapurple;
-}
+} */
 /* Contact Us */
 .contact-us {
   display: flex;
@@ -424,16 +426,61 @@ section:nth-child(5) {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 40%;
+  width: 30%;
   position: absolute;
   top: 50%;
-  left: 0;
-  transform: translate(0, -50%);
+  right: 0;
+  transform: translate(-25%, 0%);
   z-index: 3;
+}
+
+/* Title */
+.title {
+  color: #ab0101;
+  font-size: 22px;
+  z-index: 3;
+  text-align: left;
+  line-height: 1;
+}
+.title--larger {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: normal;
+  font-size: 160px;
 }
 
 /* Hero */
 .hero {
   display: flex;
   flex-basis: 50%;
+}
+
+/* Image List */
+.img-list {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: inherit;
+  /* min-height: inherit; */
+  position: absolute;
+}
+
+.img-list img {
+  position: absolute;
+}
+
+.img-list img:nth-child(1) {
+  left: 10%;
+  bottom: 0;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  width: 30%;
+}
+
+.img-list img:nth-child(2) {
+  top: 0;
+  width: 35%;
+
+  left: 0;
+  transform: translate(15%, 0);
 }

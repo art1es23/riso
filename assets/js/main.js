@@ -3,37 +3,37 @@ window.addEventListener("DOMContentLoaded", (e) => {
   console.log("HI EVERYONE!");
   console.log("====================================");
 
-  let sections = gsap.utils.toArray(".js-section");
+  //   let sections = gsap.utils.toArray(".js-section");
 
-  function goToSection(i) {
-    gsap.to(window, {
-      scrollTo: {
-        y: i * innerHeight,
-        autoKill: false,
-        ease: "Power3.easeIn",
-      },
-      duration: 0.1,
-    });
-  }
+  //   function goToSection(i) {
+  //     gsap.to(window, {
+  //       scrollTo: {
+  //         y: i * innerHeight,
+  //         autoKill: false,
+  //         ease: "Power3.easeIn",
+  //       },
+  //       duration: 0.1,
+  //     });
+  //   }
 
-  ScrollTrigger.defaults({
-    // markers: true,
-  });
+  //   ScrollTrigger.defaults({
+  //     // markers: true,
+  //   });
 
-  sections.forEach((eachPanel, i) => {
-    const mainAnim = gsap.timeline({ paused: true });
+  //   sections.forEach((eachPanel, i) => {
+  //     const mainAnim = gsap.timeline({ paused: true });
 
-    ScrollTrigger.create({
-      trigger: eachPanel,
-      onEnter: () => goToSection(i),
-    });
+  //     ScrollTrigger.create({
+  //       trigger: eachPanel,
+  //       onEnter: () => goToSection(i),
+  //     });
 
-    ScrollTrigger.create({
-      trigger: eachPanel,
-      start: "bottom bottom",
-      onEnterBack: () => goToSection(i),
-    });
-  });
+  //     ScrollTrigger.create({
+  //       trigger: eachPanel,
+  //       start: "bottom bottom",
+  //       onEnterBack: () => goToSection(i),
+  //     });
+  //   });
 
   //   gsap.fromTo(
   //     ".js-section",

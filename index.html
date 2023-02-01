@@ -5,11 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RISO Equipment</title>
+
+    <link rel="stylesheet" href="./assets/css/lib/swiper-styles.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/media.css" />
   </head>
   <body>
     <header class="header" id="header">
       <a href="" class="logo">
-        <span class="logo-wrapper">
+        <span class="logo-icon">
           <svg></svg>
         </span>
       </a>
@@ -35,11 +39,46 @@
     </header>
 
     <main class="main" id="main">
-      <section class="container"></section>
-      <section class="container"></section>
-      <section class="container"></section>
-      <section class="container"></section>
-      <section class="container"></section>
+      <section class="hero swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">Slide 1</div>
+          <div class="swiper-slide">Slide 2</div>
+          <div class="swiper-slide">Slide 3</div>
+        </div>
+      </section>
+
+      <section class="js-section trigger swiper section-1">
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">Slide 1</div>
+          <div class="swiper-slide">Slide 2</div>
+          <div class="swiper-slide">Slide 3</div>
+        </div>
+      </section>
+
+      <section class="js-section swiper section-2">
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">Slide 1</div>
+          <div class="swiper-slide">Slide 2</div>
+          <div class="swiper-slide">Slide 3</div>
+        </div>
+      </section>
+
+      <section class="js-section swiper section-3">
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">Slide 1</div>
+          <div class="swiper-slide">Slide 2</div>
+          <div class="swiper-slide">Slide 3</div>
+        </div>
+      </section>
+
+      <section class="js-section swiper contact-us">
+        <div class="contact-us-wrapper">Contact Us</div>
+      </section>
     </main>
 
     <footer class="footer" id="footer">
@@ -86,5 +125,10 @@
         </g>
       </svg>
     </a>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="./assets/js/lib/swiper-bundle.min.js"></script>
+    <script src="./assets/js/main.js"></script>
   </body>
 </html>

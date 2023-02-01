@@ -417,3 +417,23 @@ section:nth-child(5) {
   align-items: center;
   justify-content: center;
 }
+
+/* Product-thumb */
+.product-thumb {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  z-index: 3;
+}
+
+/* Hero */
+.hero {
+  display: flex;
+  flex-basis: 50%;
+}

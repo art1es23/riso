@@ -59,7 +59,7 @@ window.addEventListener("DOMContentLoaded", (e) => {
   cursorInit();
 
   const washerInit = () => {
-    let washer = document.querySelector(".hero");
+    let washer = document.querySelector(".product-list");
 
     // ScrollTrigger.defaults({
     //   markers: true,

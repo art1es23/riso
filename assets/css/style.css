@@ -288,7 +288,8 @@ section:nth-child(3) {
   background-color: var(--accent-color);
   border-radius: 5px;
   color: var(--main-color);
-  font-size: max(0.9vw, 14px);
+  font-size: max(1vw, 14px);
+  font-family: var(--base-font-family);
   cursor: pointer;
 }
 
@@ -424,13 +425,13 @@ section:nth-child(3) {
 /* Footer */
 
 .footer {
-  /* position: fixed;
+  position: fixed;
   left: 0;
-  bottom: 0; */
+  bottom: 0;
   width: 100%;
   min-height: 20vh;
   margin-top: auto;
-  /* z-index: 0; */
+  z-index: 0;
   background-color: #000000;
   /* background: var(--base-color); */
   display: flex;
@@ -708,6 +709,26 @@ section:nth-child(3) {
   display: flex;
   flex-direction: column;
   transition: all 0.5s ease-in-out;
+  position: relative;
+}
+
+.washer::before {
+  content: "暗闇から抜け出す";
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 100px;
+  top: 0%;
+  left: 59%;
+  transform-origin: center;
+  /* rotate: -90deg; */
+  writing-mode: vertical-lr;
+  transform: translate(-50%, 0);
+  /* color: rgb(255 255 255 / 50%); */
+  height: 100%;
+  color: var(--accent-color);
 }
 
 /* .washer:hover {
@@ -726,6 +747,7 @@ section:nth-child(3) {
 .washer__item {
   width: 52.5%;
   color: var(--main-color);
+  z-index: 2;
 }
 
 .washer-caption {
@@ -734,7 +756,7 @@ section:nth-child(3) {
 }
 
 .washer-legend {
-  font-size: 2.5rem;
+  font-size: 2rem;
   padding: 0 1.5rem;
 }
 
@@ -752,7 +774,7 @@ section:nth-child(3) {
   grid-template-rows: max(17.5vh, 7.5rem) auto;
   gap: 5vh 5vw;
   justify-content: center;
-  padding: 20vh 0 20vh 8.5vw;
+  padding: 20vh 0 10vh 8.5vw;
   min-height: auto;
 }
 
@@ -761,7 +783,7 @@ section:nth-child(3) {
 }
 
 .hero__thumb {
-  grid-row: 1/3;
+  grid-row: 1/4;
   grid-column: 2/3;
   width: 100%;
   height: 100%;
@@ -774,6 +796,11 @@ section:nth-child(3) {
 .hero__thumb img {
   /* width: 100%; */
   object-fit: contain;
+}
+
+.button-download {
+  max-width: 40%;
+  align-self: flex-start;
 }
 
 /* Image List */
@@ -817,6 +844,22 @@ section:nth-child(3) {
   justify-items: center;
   max-width: 82.5vw;
   position: relative;
+}
+
+.advantages::after {
+  content: "信頼性";
+  font-size: 200px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--accent-color);
+  top: 0;
+  left: 50%;
+  writing-mode: vertical-lr;
+
+  transform: translate(-60%, -25%);
 }
 
 .advantages__item {
@@ -1017,18 +1060,20 @@ section:nth-child(3) {
   background-color: var(--accent-color);
 }
 
-/* .video-list::before,
-.video-list::after {
-  content: "";
-  width: 100%;
-  height: 30px;
+.video-list::before {
+  content: "品質";
   position: absolute;
-  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  /* width: 100%; */
+  bottom: 0;
   right: 0;
-  top: 20%;
-  background-color: var(--accent-color);
-  rotate: -5deg;
-} */
+  font-size: 300px;
+  color: var(--main-color);
+  transform: translate(10%, 15%);
+}
 
 .video-list-wrapper {
   display: grid;
@@ -1041,7 +1086,7 @@ section:nth-child(3) {
 
 .video {
   position: relative;
-  width: 80%;
+  width: 100%;
   /* height: 0; */
   /* padding: 28.25%; */
   background-color: #333;
@@ -1107,4 +1152,67 @@ section:nth-child(3) {
 
 .video--enabled .video__button {
   display: flex;
+}
+
+/* Benefits section */
+
+.benefits {
+  min-height: auto;
+}
+
+.benefits-wrapper {
+  display: grid;
+  grid-template-columns: 10% 1fr;
+  gap: max(5vw, 2.5rem);
+  justify-items: flex-start;
+  width: 100%;
+  margin: max(10vh, 2.5rem) auto max(15vh, 5rem);
+}
+
+.benefits-tabs {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: max(5vh, 2.5rem);
+}
+
+.benefits-tabs__item {
+  width: 10rem;
+  height: 10rem;
+  cursor: pointer;
+  transition: fill var(--base-transition);
+}
+
+.benefits-tabs__item--active {
+  fill: var(--accent-color);
+}
+
+.benefits-tabs__item:is(:hover, :active, :focus) {
+  fill: var(--accent-color);
+}
+
+/* Benefits List Items */
+
+.benefits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.benefit {
+  display: flex;
+  flex-direction: column;
+  gap: max(2.5vh, 1rem);
+}
+
+.benefit.benefit--hidden {
+  display: none;
+}
+
+.benefit__caption {
+  font-size: 3.5rem;
+}
+
+.benefit__description {
+  font-size: 2rem;
 }

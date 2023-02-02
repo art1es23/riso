@@ -174,12 +174,15 @@ table {
   --main-color: #ffffff;
   --base-color: #4e5052;
   --accent-color: #bd2c26;
+
+  --base-transition: 0.3s ease-in;
+  --base-font-family: "Bebas Neue", sans-serif;
 }
 
 html,
 body {
   /* font-family: "Montserrat", sans-serif; */
-  font-family: "Bebas Neue", sans-serif;
+  font-family: var(--base-font-family);
   font-size: 10px;
   overflow-x: hidden;
   width: 100%;
@@ -245,7 +248,7 @@ section:nth-child(3) {
 }
 
 .title {
-  font-family: "Bebas Neue", sans-serif;
+  font-family: var(--base-font-family);
   font-style: normal;
   font-weight: 400;
   font-size: max(4.25vw, 56px);
@@ -282,17 +285,18 @@ section:nth-child(3) {
   text-transform: uppercase;
   font-weight: 500;
   border: none;
-  background-color: var(--main-color);
-  border-radius: var(--border-radius);
-  color: var(--base-color);
-  font-size: var(--base-font-size);
+  background-color: var(--accent-color);
+  border-radius: 5px;
+  color: var(--main-color);
+  font-size: max(0.9vw, 14px);
   cursor: pointer;
 }
 
 .button:hover,
 .button:active,
 .button:focus {
-  background-color: var(--main-color-hover);
+  background-color: var(--main-color);
+  color: var(--accent-color);
 }
 
 /* Header */
@@ -426,7 +430,8 @@ section:nth-child(3) {
   bottom: 0;
   min-height: 20vh;
   z-index: 0;
-  background: var(--base-color);
+  background-color: #000000;
+  /* background: var(--base-color); */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -520,7 +525,7 @@ section:nth-child(3) {
 .social-links a:hover svg,
 .social-links a:active svg,
 .social-links a:focus svg {
-  fill: var(--main-color);
+  fill: var(--accent-color);
 }
 
 /* Footer button styles */
@@ -535,7 +540,7 @@ section:nth-child(3) {
   text-align: center;
   color: var(--main-color);
   font-weight: 300;
-  font-size: max(0.65vw, 12px);
+  font-size: max(0.75vw, 14px);
 }
 
 /* Scrool to Top */
@@ -580,6 +585,7 @@ section:nth-child(3) {
 /* Product Slider */
 .product-list .swiper-slide {
   align-items: center;
+  padding-bottom: 15vh;
 }
 
 .product {
@@ -614,7 +620,7 @@ section:nth-child(3) {
   line-height: 1;
 }
 .title--larger {
-  font-family: "Bebas Neue", sans-serif;
+  font-family: var(--base-font-family);
   font-weight: normal;
   font-size: 160px;
   mix-blend-mode: overlay;
@@ -659,7 +665,7 @@ section:nth-child(3) {
   font-size: 20px;
   text-align: right;
   /* font-family: "Montserrat", sans-serif; */
-  font-family: "Bebas Neue", sans-serif;
+  font-family: var(--base-font-family);
   color: var(--base-color);
 }
 
@@ -686,7 +692,7 @@ section:nth-child(3) {
 
 .hero-legend__description {
   font-size: 40px;
-  font-family: "Bebas Neue", sans-serif;
+  font-family: var(--base-font-family);
   text-align: right;
   width: 100%;
   color: var(--main-color);
@@ -993,4 +999,105 @@ section:nth-child(3) {
 }
 .cursor-text .char {
   position: absolute;
+}
+
+/* Video List Section */
+.video-list {
+  /* background-color: #ab0101; */
+  padding: max(15vh, 5rem) 0;
+  min-height: auto;
+  position: relative;
+  background-color: var(--accent-color);
+}
+
+/* .video-list::before,
+.video-list::after {
+  content: "";
+  width: 100%;
+  height: 30px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 20%;
+  background-color: var(--accent-color);
+  rotate: -5deg;
+} */
+
+.video-list-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5rem;
+  width: 100%;
+  justify-items: center;
+}
+/* Video articles ~ Preview from YouTube */
+
+.video {
+  position: relative;
+  width: 80%;
+  /* height: 0; */
+  /* padding: 28.25%; */
+  background-color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  aspect-ratio: 16/9;
+}
+
+.anatol-videos-list {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.anatol-videos-list .video {
+  padding: 26.25%;
+}
+
+.video__media {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  max-width: 100%;
+}
+
+.video__button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  padding: 0;
+  outline: none;
+  display: none;
+  cursor: pointer;
+  border: none;
+}
+
+.video__button-shape {
+  fill: #212121;
+  fill-opacity: 0.8;
+  transition: fill 0.15s ease-in, fill-opacity 0.15s ease-in;
+}
+
+.video:hover .video__button-shape,
+.video__button:focus .video__button-shape {
+  fill: #cd2122;
+  fill-opacity: 1;
+}
+.video__button-icon {
+  fill: #fff;
+}
+.video--enabled {
+  cursor: pointer;
+}
+
+.video--enabled .video__button {
+  display: flex;
 }

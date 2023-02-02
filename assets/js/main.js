@@ -1,7 +1,61 @@
 window.addEventListener("DOMContentLoaded", (e) => {
-  console.log("====================================");
-  console.log("HI EVERYONE!");
-  console.log("====================================");
+  const cursorInit = () => {
+    Splitting();
+    let cursor = document.querySelector(".cursor"),
+      cursorText = cursor.querySelectorAll(".char");
+
+    let radius = 55;
+
+    function init() {
+      rounded(radius);
+
+      window.addEventListener("mousemove", cursorMove);
+    }
+    window.addEventListener("load", function () {
+      init();
+    });
+
+    function rounded(radius) {
+      cursorText.forEach((item, idx) => {
+        let rotation = idx * (360 / cursorText.length);
+
+        gsap.set(item, {
+          transformOrigin: `0px ${radius}px`,
+          x: radius,
+          rotate: rotation,
+        });
+
+        gsap.set(cursor, {
+          transformOrigin: "center center",
+          rotation: 0,
+          width: radius * 2,
+          height: radius * 2,
+        });
+      });
+
+      let rotate = gsap.timeline({ repeat: -1 });
+      rotate.to(cursor, {
+        rotation: 360,
+        duration: 5,
+        ease: "none",
+      });
+    }
+
+    function cursorMove(e) {
+      let mouseX = e.pageX,
+        mouseY = e.pageY;
+
+      t1 = gsap.timeline();
+
+      t1.to(cursor, {
+        duration: 1,
+        x: mouseX - radius,
+        y: mouseY - radius,
+        ease: Expo.ease,
+      });
+    }
+  };
+  cursorInit();
 
   //   let sections = gsap.utils.toArray(".js-section");
 
@@ -35,31 +89,43 @@ window.addEventListener("DOMContentLoaded", (e) => {
   //     });
   //   });
 
-  //   gsap.fromTo(
-  //     ".js-section",
-  //     { autoAlpha: 0 },
-  //     {
-  //       duration: 1,
-  //       autoAlpha: 1,
-  //       stagger: 1,
-  //       scrollTrigger: {
-  //         trigger: ".trigger",
-  //         // pin: true,
-  //         scrub: true,
-  //         // markers: true,
-  //         end: window.innerHeight * 4,
-  //       },
-  //     }
-  //   );
+  // gsap.fromTo(
+  //   ".section-trigger",
+  //   { autoAlpha: 0 },
+  //   {
+  //     duration: 0.4,
+  //     autoAlpha: 1,
+  //     stagger: 1,
+  //     scrollTrigger: {
+  //       trigger: ".trigger",
+  //       // pin: true,
+  //       scrub: true,
+  //       markers: true,
+  //       end: window.innerHeight * 4,
+  //     },
+  //   }
+  // );
+
+  window.addEventListener("scroll", (e) => {
+    const header = document.querySelector(".header");
+    let stickyPoint = header.offsetTop;
+
+    if (window.pageYOffset > stickyPoint) {
+      header.classList.add("sticky");
+    } else {
+      header.classList.remove("sticky");
+    }
+  });
 
   const initSlider = (sliderClassName) => {
     const swiper = new Swiper(sliderClassName, {
       loop: true,
-      effect: "coverflow",
+      effect: "fade",
+      // simulateTouch: false,
     });
   };
 
-  let arraySliders = [".hero", ".section-1", ".section-2", ".section-3"];
+  let arraySliders = [".hero", ".product-list", ".section-2", ".section-3"];
 
   arraySliders.forEach((slider) => initSlider(slider));
 });

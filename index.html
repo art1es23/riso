@@ -9,83 +9,489 @@
     <link rel="stylesheet" href="./assets/css/lib/swiper-styles.min.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/media.css" />
+    <link rel="stylesheet" href="./assets/css/form.css">
   </head>
   <body>
     <header class="header" id="header">
-      <a href="" class="logo">
-        <span class="logo-icon">
-          <svg></svg>
-        </span>
-      </a>
-      <nav class="navigation">
-        <ul class="navigation-menu">
-          <li class="navigation-menu__item">
-            <a href="#" class="navigation-menu__link"> newLink </a>
-          </li>
-          <li class="navigation-menu__item">
-            <a href="#" class="navigation-menu__link"> newLink </a>
-          </li>
-          <li class="navigation-menu__item">
-            <a href="#" class="navigation-menu__link"> newLink </a>
-          </li>
-          <li class="navigation-menu__item">
-            <a href="#" class="navigation-menu__link"> newLink </a>
-          </li>
-          <li class="navigation-menu__item">
-            <a href="#" class="navigation-menu__link"> newLink </a>
-          </li>
-        </ul>
-      </nav>
+      <div class="header-wrapper container">
+        <a href="" class="logo">
+          <!-- <span class="logo-icon"> -->
+          <svg
+            class="logo-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 415.75 84.37"
+            fill-rule="evenodd"
+            fill="#ab1a1f"
+          >
+            <path
+              d="M45.94 84.37h-.3c-1.07-.74.08-1.7.45-2.25l22.75-32.7s-12.56-1.67-13.44-6.18c-.3-1.5.45-3.75.45-3.75h-53S0 39.38 0 38.73s2-.6 2.93-.6l45.1.3 8.56-.06s2.7-2.22 4.05-3.1c6.02-3.87 13.6-5.44 22.07-6.16C89.06 20.83 95.1 11.5 101.03 3c.74-1.06 1.76-3.1 3.15-3 .03 1.48-1.15 2.77-1.95 3.9L85.7 27.3c-.33.48-1.4 1.83-1.4 1.83s12.94.67 14.75 5.83c.58 1.64-.3 3.15-.3 3.15h49.55c.73 0 2.32-.47 2.55.75-.54 1-1.86.6-2.7.6-16.6.1-33.63-.07-50 0-6.1 6.42-15.67 9.5-27.7 10l-24.54 34.9m37.38-53.3c-.52.58-1.03 1.18-1.35 1.95 4.22.25 9.06.62 8.55 5.1h3.9c1.16-6.02-5.7-6.6-11.1-7.05m-21.96 7.05h4.24c2.6-3.5 13.7-5.55 14.72-5.1l.9-1.8c-2.92-1.16-13.03 1.87-18.02 5.4l-1.84 1.5zm-.7 1.36c-.6.44-.92 1.55-.9 2.25.1 3.93 6.52 5.23 10.5 5.4.63-.57 1.14-1.27 1.5-2.1-3.76-.28-8.88-1.3-7.2-5.56h-3.9zm28.98 0c-3.73 3.47-9.18 5.23-16.06 5.56-.36.57-1.2 2.1-1.2 2.1.3.54 17.22-1.5 21.17-7.66h-3.9z"
+            />
+            <path
+              d="M93.38 9.46c.14 1.64-1.28 2.87-2.1 4.05l-2.55 3.75c-3.98 5.68-7.04 11.94-17.56 10.96-4.9-.46-8.04-3.68-11.66-6.22-2.67-1.88-5.67-3.5-6.96-5.8 3.74-1.46 6.73 1.52 9.46 2.55 5.52-1.2 10.98-2.45 17.12-3.15 1.94-.22 6.16-.45 6.16-.45s2.77-2.97 3.9-3.9a8.09 8.09 0 0 1 4.18-1.8M65.3 20.42s6 4.37 10.36 3.6c3.48-.6 6.5-4.68 7.35-6.6-6.12.78-12.47 1.32-17.7 3m36.63-5.4c5.13.62 9.46 1.27 14.1 2.55 1.37.38 4.2 1.35 4.2 1.35l6.46-1.95c2.14-.62 4.28-1.66 6.75-1.05-2.45 1.77-5.54 2.63-8.55 3.75l-9 3.3c-6.14 2.28-12.1 5.52-19.52 5.1-2.23-.12-5.24-.7-5.56-2.4-.27-1.47 1.3-3 2.25-4.35 1.62-2.33 3.66-5.54 5.26-7.95.67-1 1.98-3.74 3.45-3.76 2.85-.04.94 3.54.16 5.4m-.9 2.55s-2.47 4.48-2.1 5.7c.66 2.2 6.58.05 8.26-.45 3.2-.95 5.98-1.73 7.96-2.55-4.34-1.27-8.82-2.4-14.12-2.7m37.53 1.66c-1.88 2.78-7.55 4.36-9 4.96 4.4 2.1 4.2 10.2 4.2 10.2s10.3-.58 12.6 1.96c-2.7.8-5.8.45-9 .45h-9.46c-6.68 0-12.98.52-18.47.15-2.2-.15-5.6-.9-6-2.55-.74-3.16 4.03-4.6 6.6-5.56l17.72-6.6c3.08-1.13 6.04-2.74 9.3-3.3.48-.1 1.1-.26 1.5.28m-13.36 6.9c-2.1.98-3.72 1.57-6.6 2.85-1 .45-5.7 2-5.56 3.45.18 1.68 5.34 1.24 7.36 1.35l8.26.45c.1-3.95-1.52-6.18-3.45-8.1M12.3 36.5c3.46-3.03 14.7-2.1 14.7-2.1s2.76-1.77 4.2-2.85c4.57-3.43 9.16-5.23 13.8-7.2-.62-.85-4.88-4.86-1.5-5.4.33-.05 1.2.1 1.65.3 2.7 1.16 4.98 3.14 8.13 5.44 1.58 1.16 6.8 4.36 6.88 6.57.14 3.78-7.86 5.5-11.56 5.7-5.6.32-12.13 0-18.47 0-6.27-.02-12.55.33-17.85-.46M46.7 26.27c-5.02 2.2-9.78 4.63-13.8 7.8 4.44-.3 10.1-.27 14.4-.6 1.57-.12 4.5 0 4.05-1.65s-2.9-3.9-4.65-5.56M4.8 62.3c.9-2.04 3.97-2.85 6.45-3.9l7.36-3.15c-2.06-3.07-1.22-9.22.6-11.86-4.15-.56-9.68.27-12.3-1.8.95-1.17 2.78-.9 4.2-.9h35.43c1.44.05 3.6.83 3.9 2.25.55 2.54-2.93 4.5-5.82 5.68-1.95.8-23.5 8.5-33.5 12.18-1.96.72-3.96 2.08-6.3 1.5m31.83-14.56c1-.4 3.68-1.33 3.45-2.55-.26-1.43-3.64-1-4.95-1.05l-10.66-.6c-1.54 2.1-1.8 6.78-.45 9.3 4.22-1.56 8.33-3.33 12.6-5.1m108.1-6.6c-1.56 1.48-3.98 1.68-6.6 1.8l-7.95.3-3.45 3.45c-3.58 3.5-12.16 8.56-12.16 8.56s5.4 3.52 4.5 6.3-5.97-1.2-6.6-1.65l-11.56-8.4c-1.67-1.18-5.04-2.56-5.1-4.8-.1-3.8 7.92-5.74 11.1-6 6.23-.5 12.9 0 19.22 0h9.6c3.05.01 6.15-.35 9 .46M110.35 44c-1.6.12-4.95.8-4.95 2.4 0 .97 5.4 5.5 6.46 6.6 3.92-2.3 12.4-9 12.16-9.6-4.07.48-9.48.3-13.67.6m-63.8 24.16c-7.96-.74-14.77-2.64-20.42-5.7-5.8 1.07-10.6 4.7-17.1 4.05 1.15-1.6 3.32-2.04 5.1-2.7l28.52-10.5s8.25-3.27 12.9-3.3c2.77-.02 6.6.62 6.9 2.85.28 1.98-2.65 5.18-3.76 6.75L50 71.9c-.87 1.24-3.2 5.37-5.4 4.65-1.87-.6-.75-3.12-.15-4.35.77-1.6 1.48-2.7 2.1-4.05m-1.2-11.7C40.9 57.82 36.55 59 32.6 60.5c4.62 2.04 9.93 3.38 15.76 4.2 1.23-3.1 5.04-7.93 3.9-9.16s-4.68.22-6.9.9M107.8 66.5c-1.68 1.15-4.28.5-5.86-.15-2.1-.88-4.2-2.67-6-3.45-7.6 2.3-15.27 4.07-24.17 5.1-1.2.14-3.75.3-3.75.3s-3.84 4.5-5.1 5.7c-1.8 1.7-3.52 3.02-6.3 2.55.45-2.2 2.08-3.86 3.3-5.7 2.35-3.52 9.46-14.67 10.8-16.07 3.8-3.94 12.5-6.34 18.62-3 1.62.88 11.36 8.25 14.56 10.66 1.52 1.14 3.63 2.1 3.9 4.05m-30.2-9.9c-1.8 1.33-6.77 7.58-6.6 8.1 7.5-.82 14.6-2.02 20.87-4.05-4.1-1.75-9.15-7.85-14.27-4.06m174.07.2V25.27h-9.12l-.02 32.15c0 3.84-1.52 3.13-2.53 1.73L217.26 27.6c-.28-.38-1.16-1.22-1.54-1.5-3.4-2.38-8.62-1.9-11.77.34-2.72 1.95-3.37 5.62-3.37 7.33v18.36l9.14 15.14.02-29.64c0-3.4 1.57-2.7 2.3-1.67l21.48 29.77c.9 1.26 2.2 3.22 4.48 4.34 4 1.97 13.64.72 13.64-8.9l.02-4.4zm-75.4-32.02c-5.27 0-7.55 3.1-10.95 9.02l-21.06 36.47h10.14l18.26-31.63c1.55-2.68 2.24-3.2 3.57-3.2s2.02.5 3.58 3.2l9.8 16.96h-20.3l-4.03 8.36h29.16l3.65 6.3h10.13L187.18 33.8c-3.4-5.84-5.63-9.02-10.9-9.02zm161.32 4.66c1.78-1.63 3.97-3.16 5.88-4.17h-51.53v8.53h18.38v36.47h9.24V33.8h14.3c.77-1.23 2.07-2.83 3.73-4.35zm57.58 31.36c-2.37-1.22-2.53-6.14-2.53-10.5V25.26h-9.04V54.5c0 6.2.02 10.33 3.16 12.9 3.44 2.82 9.26 2.87 15.6 2.85l13.26-.01.1-8.33H404.7c-3.66.01-7.16.1-9.53-1.1zM275.86 24.78c-5.27 0-7.55 3.1-10.95 9.02l-10.67 18.54v11.3c0 4.03-4 6.63-4 6.63H254l18.26-31.63c1.55-2.68 2.24-3.2 3.57-3.2s2.02.5 3.58 3.2l9.8 16.96h-20.3l-4.03 8.36h29.16l3.65 6.3h10.13L286.77 33.8c-3.4-5.84-5.64-9.02-10.9-9.02zm131.24 5.44h1.1V25.7h1.6v-.92h-4.33v.92h1.62zm7-5.44l-.97 3.7-1-3.7h-1.65v5.44h1.02v-4.3l1.08 4.3h1.06l1.08-4.3v4.3h1.02v-5.44zm-57.4-.08c-13.53 0-24.5 10.3-24.5 23s10.97 23 24.5 23 24.5-10.3 24.5-23-10.97-23-24.5-23zm0 38.23c-8.95 0-16.2-6.8-16.2-15.22s7.26-15.22 16.2-15.22 16.2 6.8 16.2 15.22-7.25 15.22-16.2 15.22z"
+            />
+          </svg>
+          <!-- </span> -->
+        </a>
+        <nav class="navigation">
+          <ul class="navigation-menu">
+            <li class="navigation-menu__item">
+              <a href="#" class="navigation-menu__link"> newLink </a>
+            </li>
+            <li class="navigation-menu__item">
+              <a href="#" class="navigation-menu__link"> newLink </a>
+            </li>
+            <li class="navigation-menu__item">
+              <a href="#" class="navigation-menu__link"> newLink </a>
+            </li>
+            <li class="navigation-menu__item">
+              <a href="#" class="navigation-menu__link"> newLink </a>
+            </li>
+            <li class="navigation-menu__item">
+              <a href="#" class="navigation-menu__link"> newLink </a>
+            </li>
+          </ul>
+        </nav>
+
+        <button class="menu-toggle">
+          <span class="menu-toggle__item"></span>
+        </button>
+      </div>
     </header>
 
     <main class="main" id="main">
+      <section class="hero-legend">
+        <h2 class="title hero-legend__caption">Welcome, the next generation digital screnn maker</h2>
+        <p class="hero-legend__description">*It's a Revolution in the screen-making process using the power of digital</p>
+      </section>
+
+      <div class="washer">
+        <div class="washer-wrapper container">
+          <span class="washer__item washer-caption">Get out of the Dark</span>
+          <span class="washer__item washer-legend">*bright new way to Screen Print</span>
+        </div>
+      </div>
+
       <section class="hero js-section swiper">
         <div class="swiper-wrapper">
-          <div class="swiper-slide">Slide 1</div>
-          <div class="swiper-slide">Slide 2</div>
-          <div class="swiper-slide">Slide 3</div>
+          <div class="swiper-slide hero-wrapper">
+            <h2 class="title hero__title">Advanced Professional<br><b class="title--larger">QS2536</b></h2>
+            <p class="hero__description">Precise image quality and accurate registration. sAvailable for automatic T-shirt screen printer.</p>
+            <div class="hero__thumb">
+              <img src="./assets/img/hero_2.png" alt="">
+            </div>
+          </div>
+          <div class="swiper-slide hero-wrapper">
+            <h2 class="title hero__title">Advanced Professional<br><b class="title--larger">QS2536</b></h2>
+            <p class="hero__description">Precise image quality and accurate registration. sAvailable for automatic T-shirt screen printer.</p>
+            <div class="hero__thumb">
+              <img src="./assets/img/hero_3.png" alt="">
+            </div>
+          </div>
+          <div class="swiper-slide hero-wrapper">
+            <h2 class="title hero__title">Advanced Professional<br><b class="title--larger">QS2536</b></h2>
+            <p class="hero__description">Precise image quality and accurate registration. sAvailable for automatic T-shirt screen printer.</p>
+            <div class="hero__thumb">
+              <img src="./assets/img/hero_1.png" alt="">
+            </div>
+          </div>
         </div>
       </section>
 
-      <section class="js-section trigger swiper section-1">
+      <section class="js-section trigger swiper product-list">
         <div class="swiper-wrapper">
           <!-- Slides -->
           <div class="swiper-slide">
-            <h2 class="title product__title">
-              Advanced professional<br /><span class="title--larger"
-                >QS2536</span
-              >
-            </h2>
-            <div class="product-thumb">
-              <img src="./assets/img/QS2536_back_side.png" alt="" />
+            <div class="product">
+
+              <h2 class="title product__title">
+                Advanced professional<br /><span class="title--larger"
+                  >QS2536</span
+                >
+              </h2>
+
+              <ul class="advantages-list">
+                <li class="advantages-list__item">
+                  Resolution<br />
+                  600x1,200<br />
+                  dpi
+                </li>
+                <li class="advantages-list__item">
+                  Resolution<br />
+                  600x1,200<br />
+                  dpi
+                </li>
+                <li class="advantages-list__item">
+                  Resolution<br />
+                  600x1,200<br />
+                  dpi
+                </li>
+                <li class="advantages-list__item">
+                  Resolution<br />
+                  600x1,200<br />
+                  dpi
+                </li>
+              </ul>
+
+              <div class="product-info">
+                <p class="product-info__item product-info__item--larger">
+                  precise image <br />
+                  quality and accurate registration
+                </p>
+                <p class="product-info__item">
+                  The special thermal head has an applied energy equivalent to 600
+                  dpi that excel sin solid printing, and a 1200 dpi perforation
+                  density for detailed work. Using a high meshcount screenmaster,
+                  fine graduations in printing become possible. Comes with a line
+                  up of screen masters forvarious applications.
+                </p>
+              </div>
+
+              <div class="product-thumb">
+                <img src="./assets/img/QS2536_back_side.png" alt="" />
+              </div>
+
+              <div class="img-list">
+                <img src="./assets/img/1_1.jpg" alt="" />
+                <img src="./assets/img/1_2.jpg" alt="" />
+              </div>
             </div>
 
-            <div class="img-list">
-              <img src="./assets/img/1_1.jpg" alt="" />
-              <img src="./assets/img/1_2.jpg" alt="" />
+            <div class="advantages">
+              <!-- <div class="advantages-thumb"> -->
+
+              <h3 class="title-caption">GOCCOPRO <b class="title-caption--larger">QS2536</b></h3>
+
+              <div class="advantages__item advantages__item--zoom">
+                <img src="./assets/img/zoom.png" alt="" />
+              </div>
+              <div class="advantages__item advantages__item--shirt">
+                <img src="./assets/img/zoom_1.png" alt="" />
+              </div>
+              <div class="advantages__item advantages-polygon">
+                <svg class="polygon-list" width="400" height="400" viewPort="0 0 400 400" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <style>
+                      polygon {
+                        transition: all 1s;
+                        fill: none;
+                        stroke: rgba(0,0,0,.6);
+                        stroke-width: 1px;
+                      }
+                      .polygon-active {
+                        stroke-width: 3px;
+                        stroke: #ab0101;
+                      }
+                      <!-- .polygon-list__item {
+                        fill: #000000;
+                      } -->
+                    </style>
+                  </defs>
+
+ 
+                  <polygon points="344,185 259,332 92,297 75,127 230,58 "></polygon>
+                  <polygon points="315,188 247,306 114,278 100,142 224,87 "></polygon>
+                  <polygon points="287,191 235,279 135,258 125,156 218,115 "></polygon>
+                  <polygon points="258,194 224,253 157,239 150,171 212,143 "></polygon>
+                  <polygon points="229,197 212,226 178,219 175,185 206,172 "></polygon>
+
+                  <polygon class="polygon-active" points="344,185 235,279 135,258 75,127 230,58 "></polygon>
+
+                  <circle class="polygon-list__item polygon-one" cx="229" cy="60" r="10"><title>Image Quality</title></circle>
+                  <circle class="polygon-list__item polygon-two" cx="75" cy="125" r="10"><title>Image Size</title></circle>
+                  <circle class="polygon-list__item polygon-three" cx="345" cy="185" r="10"><title>Positioning Precision</title></circle>
+                  <circle class="polygon-list__item polygon-four" cx="235" cy="277.5" r="10"><title>Ease of use</title></circle>
+                  <circle class="polygon-list__item polygon-five" cx="132.5" cy="255" r="10"><title>Frame Size</title></circle>
+
+                  <text x="215" y="0" class="polygon-text polygon-one-text">Image Quality</text>
+                  <text x="50" y="100" class="polygon-text polygon-two-text">Image Size</text>
+                  <text x="375" y="100" class="polygon-text polygon-three-text">Positioning Precision</text>
+                  <text x="325" y="300" class="polygon-text polygon-four-text">Ease of use</text>
+                  <text x="105" y="295" class="polygon-text polygon-five-text">Frame Size</text>
+                </svg>
+              </div>
+
+              <div class="advantages-info advantages-info--larger">
+                available for automatic <br />
+                t-shirt screen printer.
+              </div>
+              <div class="advantages-info">
+                The QS2536 is a digital screen maker supporting large frames that
+                can be installed on automatic printing machines.
+              </div>
+            </div>
+          
+          </div>
+          <div class="swiper-slide">
+              <div class="product">
+
+              <h2 class="title product__title">
+                Advanced professional<br /><span class="title--larger"
+                  >QS2536</span
+                >
+              </h2>
+
+              <ul class="advantages-list">
+                <li class="advantages-list__item">
+                  Resolution<br />
+                  600x1,200<br />
+                  dpi
+                </li>
+                <li class="advantages-list__item">
+                  Resolution<br />
+                  600x1,200<br />
+                  dpi
+                </li>
+                <li class="advantages-list__item">
+                  Resolution<br />
+                  600x1,200<br />
+                  dpi
+                </li>
+                <li class="advantages-list__item">
+                  Resolution<br />
+                  600x1,200<br />
+                  dpi
+                </li>
+              </ul>
+
+              <div class="product-info">
+                <p class="product-info__item product-info__item--larger">
+                  precise image <br />
+                  quality and accurate registration
+                </p>
+                <p class="product-info__item">
+                  The special thermal head has an applied energy equivalent to 600
+                  dpi that excel sin solid printing, and a 1200 dpi perforation
+                  density for detailed work. Using a high meshcount screenmaster,
+                  fine graduations in printing become possible. Comes with a line
+                  up of screen masters forvarious applications.
+                </p>
+              </div>
+
+              <div class="product-thumb">
+                <img src="./assets/img/Sketch001.png" alt="" />
+              </div>
+
+              <div class="img-list">
+                <img src="./assets/img/1_1.jpg" alt="" />
+                <img src="./assets/img/1_2.jpg" alt="" />
+              </div>
+            </div>
+
+            <div class="advantages">
+              <!-- <div class="advantages-thumb"> -->
+
+              <h3 class="title-caption">GOCCOPRO <b class="title-caption--larger">QS2536</b></h3>
+
+              <div class="advantages__item advantages__item--zoom">
+                <img src="./assets/img/zoom.png" alt="" />
+              </div>
+              <div class="advantages__item advantages__item--shirt">
+                <img src="./assets/img/zoom_1.png" alt="" />
+              </div>
+              <div class="advantages__item advantages-polygon">
+                <svg class="polygon-list" width="400" height="400" viewPort="0 0 400 400" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <style>
+                      polygon {
+                        transition: all 1s;
+                        fill: none;
+                        stroke: rgba(0,0,0,.6);
+                        stroke-width: 1px;
+                      }
+                      .polygon-active {
+                        stroke-width: 3px;
+                        stroke: #ab0101;
+                      }
+                      <!-- .polygon-list__item {
+                        fill: #000000;
+                      } -->
+                    </style>
+                  </defs>
+
+ 
+                  <polygon points="344,185 259,332 92,297 75,127 230,58 "></polygon>
+                  <polygon points="315,188 247,306 114,278 100,142 224,87 "></polygon>
+                  <polygon points="287,191 235,279 135,258 125,156 218,115 "></polygon>
+                  <polygon points="258,194 224,253 157,239 150,171 212,143 "></polygon>
+                  <polygon points="229,197 212,226 178,219 175,185 206,172 "></polygon>
+
+                  <polygon class="polygon-active" points="344,185 235,279 135,258 75,127 230,58 "></polygon>
+
+                  <circle class="polygon-list__item polygon-one" cx="229" cy="60" r="10"><title>Image Quality</title></circle>
+                  <circle class="polygon-list__item polygon-two" cx="75" cy="125" r="10"><title>Image Size</title></circle>
+                  <circle class="polygon-list__item polygon-three" cx="345" cy="185" r="10"><title>Positioning Precision</title></circle>
+                  <circle class="polygon-list__item polygon-four" cx="235" cy="277.5" r="10"><title>Ease of use</title></circle>
+                  <circle class="polygon-list__item polygon-five" cx="132.5" cy="255" r="10"><title>Frame Size</title></circle>
+
+                  <text x="215" y="0" class="polygon-text polygon-one-text">Image Quality</text>
+                  <text x="50" y="100" class="polygon-text polygon-two-text">Image Size</text>
+                  <text x="375" y="100" class="polygon-text polygon-three-text">Positioning Precision</text>
+                  <text x="325" y="300" class="polygon-text polygon-four-text">Ease of use</text>
+                  <text x="105" y="295" class="polygon-text polygon-five-text">Frame Size</text>
+                </svg>
+              </div>
+
+              <div class="advantages-info advantages-info--larger">
+                available for automatic <br />
+                t-shirt screen printer.
+              </div>
+              <div class="advantages-info">
+                The QS2536 is a digital screen maker supporting large frames that
+                can be installed on automatic printing machines.
+              </div>
             </div>
           </div>
           <div class="swiper-slide">
-            <div class="product-thumb">
-              <img src="./assets/img/QS2536_back_side.png" alt="" />
+                        <div class="product">
+
+              <h2 class="title product__title">
+                Advanced professional<br /><span class="title--larger"
+                  >QS2536</span
+                >
+              </h2>
+
+              <ul class="advantages-list">
+                <li class="advantages-list__item">
+                  Resolution<br />
+                  600x1,200<br />
+                  dpi
+                </li>
+                <li class="advantages-list__item">
+                  Resolution<br />
+                  600x1,200<br />
+                  dpi
+                </li>
+                <li class="advantages-list__item">
+                  Resolution<br />
+                  600x1,200<br />
+                  dpi
+                </li>
+                <li class="advantages-list__item">
+                  Resolution<br />
+                  600x1,200<br />
+                  dpi
+                </li>
+              </ul>
+
+              <div class="product-info">
+                <p class="product-info__item product-info__item--larger">
+                  precise image <br />
+                  quality and accurate registration
+                </p>
+                <p class="product-info__item">
+                  The special thermal head has an applied energy equivalent to 600
+                  dpi that excel sin solid printing, and a 1200 dpi perforation
+                  density for detailed work. Using a high meshcount screenmaster,
+                  fine graduations in printing become possible. Comes with a line
+                  up of screen masters forvarious applications.
+                </p>
+              </div>
+
+              <div class="product-thumb">
+                <img src="./assets/img/QS2536_back_side.png" alt="" />
+              </div>
+
+              <div class="img-list">
+                <img src="./assets/img/1_1.jpg" alt="" />
+                <img src="./assets/img/1_2.jpg" alt="" />
+              </div>
+            </div>
+
+            <div class="advantages">
+              <!-- <div class="advantages-thumb"> -->
+
+              <h3 class="title-caption">GOCCOPRO <b class="title-caption--larger">QS2536</b></h3>
+
+              <div class="advantages__item advantages__item--zoom">
+                <img src="./assets/img/zoom.png" alt="" />
+              </div>
+              <div class="advantages__item advantages__item--shirt">
+                <img src="./assets/img/zoom_1.png" alt="" />
+              </div>
+              <div class="advantages__item advantages-polygon">
+                <svg class="polygon-list" width="400" height="400" viewPort="0 0 400 400" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <style>
+                      polygon {
+                        transition: all 1s;
+                        fill: none;
+                        stroke: rgba(0,0,0,.6);
+                        stroke-width: 1px;
+                      }
+                      .polygon-active {
+                        stroke-width: 3px;
+                        stroke: #ab0101;
+                      }
+                      <!-- .polygon-list__item {
+                        fill: #000000;
+                      } -->
+                    </style>
+                  </defs>
+
+ 
+                  <polygon points="344,185 259,332 92,297 75,127 230,58 "></polygon>
+                  <polygon points="315,188 247,306 114,278 100,142 224,87 "></polygon>
+                  <polygon points="287,191 235,279 135,258 125,156 218,115 "></polygon>
+                  <polygon points="258,194 224,253 157,239 150,171 212,143 "></polygon>
+                  <polygon points="229,197 212,226 178,219 175,185 206,172 "></polygon>
+
+                  <polygon class="polygon-active" points="344,185 235,279 135,258 75,127 230,58 "></polygon>
+
+                  <circle class="polygon-list__item polygon-one" cx="229" cy="60" r="10"><title>Image Quality</title></circle>
+                  <circle class="polygon-list__item polygon-two" cx="75" cy="125" r="10"><title>Image Size</title></circle>
+                  <circle class="polygon-list__item polygon-three" cx="345" cy="185" r="10"><title>Positioning Precision</title></circle>
+                  <circle class="polygon-list__item polygon-four" cx="235" cy="277.5" r="10"><title>Ease of use</title></circle>
+                  <circle class="polygon-list__item polygon-five" cx="132.5" cy="255" r="10"><title>Frame Size</title></circle>
+
+                  <text x="215" y="0" class="polygon-text polygon-one-text">Image Quality</text>
+                  <text x="50" y="100" class="polygon-text polygon-two-text">Image Size</text>
+                  <text x="375" y="100" class="polygon-text polygon-three-text">Positioning Precision</text>
+                  <text x="325" y="300" class="polygon-text polygon-four-text">Ease of use</text>
+                  <text x="105" y="295" class="polygon-text polygon-five-text">Frame Size</text>
+                </svg>
+              </div>
+
+              <div class="advantages-info advantages-info--larger">
+                available for automatic <br />
+                t-shirt screen printer.
+              </div>
+              <div class="advantages-info">
+                The QS2536 is a digital screen maker supporting large frames that
+                can be installed on automatic printing machines.
+              </div>
             </div>
           </div>
-          <div class="swiper-slide">
-            <div class="product-thumb">
-              <img src="./assets/img/QS2536_back_side.png" alt="" />
-            </div>
-          </div>
+
         </div>
       </section>
 
-      <section class="js-section swiper section-2">
+      <!-- <section class="js-section swiper section-2 product-advantages">
         <div class="swiper-wrapper">
-          <!-- Slides -->
-          <div class="swiper-slide">Slide 1</div>
+          <div class="swiper-slide advantages">
+            <div class="advantages__item advantages__item--zoom">
+              <img src="./assets/img/advantages_1.jpg" alt="" />
+            </div>
+            <div class="advantages__item">
+              <img src="./assets/img/advantages_2.jpg" alt="" />
+            </div>
+            <div class="advantages__item advantages-polygon">
+
+              <img src="./assets/img/polygon.png" alt="" />
+            </div>
+
+            <div class="advantages-info advantages-info--larger">
+              available for automatic <br />
+              t-shirt screen printer.
+            </div>
+            <div class="advantages-info">
+              The QS2536 is a digital screen maker supporting large frames that
+              can be installed on automatic printing machines.
+            </div>
+          </div>
           <div class="swiper-slide">Slide 2</div>
           <div class="swiper-slide">Slide 3</div>
         </div>
-      </section>
+      </section> -->
 
       <section class="js-section swiper section-3">
         <div class="swiper-wrapper">
@@ -97,28 +503,1003 @@
       </section>
 
       <section class="js-section swiper contact-us">
-        <div class="contact-us-wrapper">Contact Us</div>
+        <div class="contact-us-form--wrapper form">
+          <h3 class="title contact-us__title">Contact Us</h3>
+          <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+
+          <form id="__vtigerWebForm"
+            name="Christmas promocia"
+            action="https://vtiger.anatol.com/modules/Webforms/capture.php"
+            method="post"
+            accept-charset="utf-8"
+            enctype="multipart/form-data"
+                      class="form-inner get_quote get_forms"
+                    >
+            <input
+              type="hidden"
+              name="__vtrftk"
+              value="sid:675562623079d3ffa5e416c448740bcc3a90a676,1671269466"
+            /><input
+              type="hidden"
+              name="publicid"
+              value="764b67a262507106d873c7435f7bb8ea"
+            /><input type="hidden" name="urlencodeenable" value="1" /><input
+              type="hidden"
+              name="name"
+              value="Riso Equipment"
+            />
+            <input
+              type="text"
+              name="leadsource"
+              value="Riso Equipment"
+              style="display: none"
+            />
+
+            <input
+              type="text"
+              name="cf_1131"
+              value="Riso Equipment"
+              style="display: none"
+            />
+            <div class="form-inner__item">
+              <div class="form-inner__item--half">
+                <label>First Name<span class="field_required">*</span></label>
+                <input
+                  type="text"
+                  name="firstname"
+                  placeholder="First Name*"
+                  required
+                />
+              </div>
+              <div class="form-inner__item--half">
+                <label>Last Name<span class="field_required">*</span></label>
+                <input
+                  type="text"
+                  name="lastname"
+                  placeholder="Last Name*"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-inner__item">
+              <div class="form-inner__item--half">
+                <label>Phone Number<span class="field_required">*</span></label>
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="Phone Number*"
+                  maxlength="18"
+                  id="tel"
+                  required
+                />
+              </div>
+              <div class="form-inner__item--half">
+                <label>Email<span class="field_required">*</span></label>
+                <input
+                  type="Email"
+                  name="email"
+                  placeholder="Email*"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-inner__item">
+              <div class="form-inner__item--half">
+                <label>Company Name</label>
+                <input type="text" name="company" placeholder="Company Name" />
+              </div>
+              <div class="form-inner__item--half">
+                <label>Country</label>
+                <select name="cf_1135" onchange="yesnoCheck(this);" required>
+                  <option class="choose_elements" value="" selected="selected">
+                    Select Country*
+                  </option>
+                  <option class="elements" value="United States">
+                    United States
+                  </option>
+                  <option class="elements" value="United Kingdom">
+                    United Kingdom
+                  </option>
+                  <option class="elements" value="Afghanistan">
+                    Afghanistan
+                  </option>
+                  <option class="elements" value="Albania">Albania</option>
+                  <option class="elements" value="Algeria">Algeria</option>
+                  <option class="elements" value="American Samoa">
+                    American Samoa
+                  </option>
+                  <option class="elements" value="Andorra">Andorra</option>
+                  <option class="elements" value="Angola">Angola</option>
+                  <option class="elements" value="Anguilla">Anguilla</option>
+                  <option class="elements" value="Antarctica">
+                    Antarctica
+                  </option>
+                  <option class="elements" value="Antigua and Barbuda">
+                    Antigua and Barbuda
+                  </option>
+                  <option class="elements" value="Argentina">Argentina</option>
+                  <option class="elements" value="Armenia">Armenia</option>
+                  <option class="elements" value="Aruba">Aruba</option>
+                  <option class="elements" value="Australia">Australia</option>
+                  <option class="elements" value="Austria">Austria</option>
+                  <option class="elements" value="Azerbaijan">
+                    Azerbaijan
+                  </option>
+                  <option class="elements" value="Bahamas">Bahamas</option>
+                  <option class="elements" value="Bahrain">Bahrain</option>
+                  <option class="elements" value="Bangladesh">
+                    Bangladesh
+                  </option>
+                  <option class="elements" value="Barbados">Barbados</option>
+                  <option class="elements" value="Belarus">Belarus</option>
+                  <option class="elements" value="Belgium">Belgium</option>
+                  <option class="elements" value="Belize">Belize</option>
+                  <option class="elements" value="Benin">Benin</option>
+                  <option class="elements" value="Bermuda">Bermuda</option>
+                  <option class="elements" value="Bhutan">Bhutan</option>
+                  <option class="elements" value="Bolivia">Bolivia</option>
+                  <option class="elements" value="Bonaire">
+                    Bonaire, Sint Eustatius and Saba
+                  </option>
+                  <option class="elements" value="Bosnia and Herzegovina">
+                    Bosnia and Herzegovina
+                  </option>
+                  <option class="elements" value="Botswana">Botswana</option>
+                  <option class="elements" value="Bouvet Island">
+                    Bouvet Island
+                  </option>
+                  <option class="elements" value="Brazil">Brazil</option>
+                  <option
+                    class="elements"
+                    value="British Indian Ocean Territory"
+                  >
+                    British Indian Ocean Territory
+                  </option>
+                  <option class="elements" value="Brunei Darussalam">
+                    Brunei Darussalam
+                  </option>
+                  <option class="elements" value="Bulgaria">Bulgaria</option>
+                  <option class="elements" value="Burkina Faso">
+                    Burkina Faso
+                  </option>
+                  <option class="elements" value="Burundi">Burundi</option>
+                  <option class="elements" value="Cambodia">Cambodia</option>
+                  <option class="elements" value="Cameroon">Cameroon</option>
+                  <option class="elements" value="Canada">Canada</option>
+                  <option class="elements" value="Cape Verde">
+                    Cape Verde
+                  </option>
+                  <option class="elements" value="Cayman Islands">
+                    Cayman Islands
+                  </option>
+                  <option class="elements" value="Central African Republic">
+                    Central African Republic
+                  </option>
+                  <option class="elements" value="Chad">Chad</option>
+                  <option class="elements" value="Chile">Chile</option>
+                  <option class="elements" value="China">China</option>
+                  <option class="elements" value="Christmas Island">
+                    Christmas Island
+                  </option>
+                  <option class="elements" value="Cocos (Keeling) Islands">
+                    Cocos (Keeling) Islands
+                  </option>
+                  <option class="elements" value="Colombia">Colombia</option>
+                  <option class="elements" value="Comoros">Comoros</option>
+                  <option class="elements" value="Congo">Congo</option>
+                  <option class="elements" value="Cook Islands">
+                    Cook Islands
+                  </option>
+                  <option class="elements" value="Costa Rica">
+                    Costa Rica
+                  </option>
+                  <option class="elements" value="Cote D'ivoire">
+                    Cote D'ivoire
+                  </option>
+                  <option class="elements" value="Croatia">Croatia</option>
+                  <option class="elements" value="Cuba">Cuba</option>
+                  <option class="elements" value="Cyprus">Cyprus</option>
+                  <option class="elements" value="Czech Republic">
+                    Czech Republic
+                  </option>
+                  <option class="elements" value="Denmark">Denmark</option>
+                  <option class="elements" value="Djibouti">Djibouti</option>
+                  <option class="elements" value="Dominica">Dominica</option>
+                  <option class="elements" value="Dominican Republic">
+                    Dominican Republic
+                  </option>
+                  <option class="elements" value="Ecuador">Ecuador</option>
+                  <option class="elements" value="Egypt">Egypt</option>
+                  <option class="elements" value="El Salvador">
+                    El Salvador
+                  </option>
+                  <option class="elements" value="Equatorial Guinea">
+                    Equatorial Guinea
+                  </option>
+                  <option class="elements" value="Eritrea">Eritrea</option>
+                  <option class="elements" value="Estonia">Estonia</option>
+                  <option class="elements" value="Ethiopia">Ethiopia</option>
+                  <option class="elements" value="Falkland Islands (Malvinas)">
+                    Falkland Islands (Malvinas)
+                  </option>
+                  <option class="elements" value="Faroe Islands">
+                    Faroe Islands
+                  </option>
+                  <option class="elements" value="Fiji">Fiji</option>
+                  <option class="elements" value="Finland">Finland</option>
+                  <option class="elements" value="France">France</option>
+                  <option class="elements" value="French Guiana">
+                    French Guiana
+                  </option>
+                  <option class="elements" value="French Polynesia">
+                    French Polynesia
+                  </option>
+                  <option class="elements" value="French Southern Territories">
+                    French Southern Territories
+                  </option>
+                  <option class="elements" value="Gabon">Gabon</option>
+                  <option class="elements" value="Gambia">Gambia</option>
+                  <option class="elements" value="Georgia">Georgia</option>
+                  <option class="elements" value="Germany">Germany</option>
+                  <option class="elements" value="Ghana">Ghana</option>
+                  <option class="elements" value="Gibraltar">Gibraltar</option>
+                  <option class="elements" value="Greece">Greece</option>
+                  <option class="elements" value="Greenland">Greenland</option>
+                  <option class="elements" value="Grenada">Grenada</option>
+                  <option class="elements" value="Guadeloupe">
+                    Guadeloupe
+                  </option>
+                  <option class="elements" value="Guam">Guam</option>
+                  <option class="elements" value="Guatemala">Guatemala</option>
+                  <option class="elements" value="Guinea">Guinea</option>
+                  <option class="elements" value="Guinea-bissau">
+                    Guinea-bissau
+                  </option>
+                  <option class="elements" value="Guyana">Guyana</option>
+                  <option class="elements" value="Haiti">Haiti</option>
+                  <option
+                    class="elements"
+                    value="Heard Island and Mcdonald Islands"
+                  >
+                    Heard Island and Mcdonald Islands
+                  </option>
+                  <option
+                    class="elements"
+                    value="Holy See (Vatican City State)"
+                  >
+                    Holy See (Vatican City State)
+                  </option>
+                  <option class="elements" value="Honduras">Honduras</option>
+                  <option class="elements" value="Hong Kong">Hong Kong</option>
+                  <option class="elements" value="Hungary">Hungary</option>
+                  <option class="elements" value="Iceland">Iceland</option>
+                  <option class="elements" value="India">India</option>
+                  <option class="elements" value="Indonesia">Indonesia</option>
+                  <option class="elements" value="Iran">
+                    Iran, Islamic Republic of
+                  </option>
+                  <option class="elements" value="Iraq">Iraq</option>
+                  <option class="elements" value="Ireland">Ireland</option>
+                  <option class="elements" value="Israel">Israel</option>
+                  <option class="elements" value="Italy">Italy</option>
+                  <option class="elements" value="Jamaica">Jamaica</option>
+                  <option class="elements" value="Japan">Japan</option>
+                  <option class="elements" value="Jordan">Jordan</option>
+                  <option class="elements" value="Kazakhstan">
+                    Kazakhstan
+                  </option>
+                  <option class="elements" value="Kenya">Kenya</option>
+                  <option class="elements" value="Kiribati">Kiribati</option>
+                  <option
+                    class="elements"
+                    value="Democratic People's Republic of Korea"
+                  >
+                    Korea, Democratic People's Republic of
+                  </option>
+                  <option class="elements" value="Republic of Korea">
+                    Korea, Republic of
+                  </option>
+                  <option class="elements" value="Kuwait">Kuwait</option>
+                  <option class="elements" value="Kyrgyzstan">
+                    Kyrgyzstan
+                  </option>
+                  <option
+                    class="elements"
+                    value="Lao People's Democratic Republic"
+                  >
+                    Lao People's Democratic Republic
+                  </option>
+                  <option class="elements" value="Latvia">Latvia</option>
+                  <option class="elements" value="Lebanon">Lebanon</option>
+                  <option class="elements" value="Lesotho">Lesotho</option>
+                  <option class="elements" value="Liberia">Liberia</option>
+                  <option class="elements" value="Libyan Arab Jamahiriya">
+                    Libyan Arab Jamahiriya
+                  </option>
+                  <option class="elements" value="Liechtenstein">
+                    Liechtenstein
+                  </option>
+                  <option class="elements" value="Lithuania">Lithuania</option>
+                  <option class="elements" value="Luxembourg">
+                    Luxembourg
+                  </option>
+                  <option class="elements" value="Macao">Macao</option>
+                  <option class="elements" value="Macedonia">
+                    Macedonia, the former Yugoslav Republic of
+                  </option>
+                  <option class="elements" value="Madagascar">
+                    Madagascar
+                  </option>
+                  <option class="elements" value="Malawi">Malawi</option>
+                  <option class="elements" value="Malaysia">Malaysia</option>
+                  <option class="elements" value="Maldives">Maldives</option>
+                  <option class="elements" value="Mali">Mali</option>
+                  <option class="elements" value="Malta">Malta</option>
+                  <option class="elements" value="Marshall Islands">
+                    Marshall Islands
+                  </option>
+                  <option class="elements" value="Martinique">
+                    Martinique
+                  </option>
+                  <option class="elements" value="Mauritania">
+                    Mauritania
+                  </option>
+                  <option class="elements" value="Mauritius">Mauritius</option>
+                  <option class="elements" value="Mayotte">Mayotte</option>
+                  <option class="elements" value="Mexico">Mexico</option>
+                  <option
+                    class="elements"
+                    value="Federated States of Micronesia"
+                  >
+                    Micronesia, Federated States of
+                  </option>
+                  <option class="elements" value="Moldova">
+                    Moldova, Republic of
+                  </option>
+                  <option class="elements" value="Monaco">Monaco</option>
+                  <option class="elements" value="Mongolia">Mongolia</option>
+                  <option class="elements" value="Montserrat">
+                    Montserrat
+                  </option>
+                  <option class="elements" value="Morocco">Morocco</option>
+                  <option class="elements" value="Mozambique">
+                    Mozambique
+                  </option>
+                  <option class="elements" value="Myanmar">Myanmar</option>
+                  <option class="elements" value="Namibia">Namibia</option>
+                  <option class="elements" value="Nauru">Nauru</option>
+                  <option class="elements" value="Nepal">Nepal</option>
+                  <option class="elements" value="Netherlands">
+                    Netherlands
+                  </option>
+                  <option class="elements" value="Netherlands Antilles">
+                    Netherlands Antilles
+                  </option>
+                  <option class="elements" value="New Caledonia">
+                    New Caledonia
+                  </option>
+                  <option class="elements" value="New Zealand">
+                    New Zealand
+                  </option>
+                  <option class="elements" value="Nicaragua">Nicaragua</option>
+                  <option class="elements" value="Niger">Niger</option>
+                  <option class="elements" value="Nigeria">Nigeria</option>
+                  <option class="elements" value="Niue">Niue</option>
+                  <option class="elements" value="Norfolk Island">
+                    Norfolk Island
+                  </option>
+                  <option class="elements" value="Northern Mariana Islands">
+                    Northern Mariana Islands
+                  </option>
+                  <option class="elements" value="Norway">Norway</option>
+                  <option class="elements" value="Oman">Oman</option>
+                  <option class="elements" value="Pakistan">Pakistan</option>
+                  <option class="elements" value="Palau">Palau</option>
+                  <option
+                    class="elements"
+                    value="Occupied Palestinian Territory"
+                  >
+                    Palestinian Territory, Occupied
+                  </option>
+                  <option class="elements" value="Panama">Panama</option>
+                  <option class="elements" value="Papua New Guinea">
+                    Papua New Guinea
+                  </option>
+                  <option class="elements" value="Paraguay">Paraguay</option>
+                  <option class="elements" value="Peru">Peru</option>
+                  <option class="elements" value="Philippines">
+                    Philippines
+                  </option>
+                  <option class="elements" value="Pitcairn">Pitcairn</option>
+                  <option class="elements" value="Poland">Poland</option>
+                  <option class="elements" value="Portugal">Portugal</option>
+                  <option class="elements" value="Puerto Rico">
+                    Puerto Rico
+                  </option>
+                  <option class="elements" value="Qatar">Qatar</option>
+                  <option class="elements" value="Reunion">Reunion</option>
+                  <option class="elements" value="Romania">Romania</option>
+                  <option class="elements" value="Russian Federation">
+                    Russian Federation
+                  </option>
+                  <option class="elements" value="Rwanda">Rwanda</option>
+                  <option class="elements" value="Saint Helena">
+                    Saint Helena
+                  </option>
+                  <option class="elements" value="Saint Kitts and Nevis">
+                    Saint Kitts and Nevis
+                  </option>
+                  <option class="elements" value="Saint Lucia">
+                    Saint Lucia
+                  </option>
+                  <option class="elements" value="Saint Martin (French part)">
+                    Saint Martin (French part)
+                  </option>
+                  <option class="elements" value="Saint Pierre and Miquelon">
+                    Saint Pierre and Miquelon
+                  </option>
+                  <option
+                    class="elements"
+                    value="Saint Vincent and The Grenadines"
+                  >
+                    Saint Vincent and The Grenadines
+                  </option>
+                  <option class="elements" value="Samoa">Samoa</option>
+                  <option class="elements" value="San Marino">
+                    San Marino
+                  </option>
+                  <option class="elements" value="Sao Tome and Principe">
+                    Sao Tome and Principe
+                  </option>
+                  <option class="elements" value="Saudi Arabia">
+                    Saudi Arabia
+                  </option>
+                  <option class="elements" value="Senegal">Senegal</option>
+                  <option class="elements" value="Serbia and Montenegro">
+                    Serbia and Montenegro
+                  </option>
+                  <option class="elements" value="Seychelles">
+                    Seychelles
+                  </option>
+                  <option class="elements" value="Sierra Leone">
+                    Sierra Leone
+                  </option>
+                  <option class="elements" value="Singapore">Singapore</option>
+                  <option class="elements" value="Slovakia">Slovakia</option>
+                  <option class="elements" value="Slovenia">Slovenia</option>
+                  <option class="elements" value="Solomon Islands">
+                    Solomon Islands
+                  </option>
+                  <option class="elements" value="Somalia">Somalia</option>
+                  <option class="elements" value="South Africa">
+                    South Africa
+                  </option>
+                  <option
+                    class="elements"
+                    value="South Georgia and The South Sandwich Islands"
+                  >
+                    South Georgia and The South Sandwich Islands
+                  </option>
+                  <option class="elements" value="Spain">Spain</option>
+                  <option class="elements" value="Sri Lanka">Sri Lanka</option>
+                  <option class="elements" value="Sudan">Sudan</option>
+                  <option class="elements" value="Suriname">Suriname</option>
+                  <option class="elements" value="Svalbard and Jan Mayen">
+                    Svalbard and Jan Mayen
+                  </option>
+                  <option class="elements" value="Swaziland">Swaziland</option>
+                  <option class="elements" value="Sweden">Sweden</option>
+                  <option class="elements" value="Switzerland">
+                    Switzerland
+                  </option>
+                  <option class="elements" value="Syrian Arab Republic">
+                    Syrian Arab Republic
+                  </option>
+                  <option class="elements" value="Taiwan">
+                    Taiwan, Province of China
+                  </option>
+                  <option class="elements" value="Tajikistan">
+                    Tajikistan
+                  </option>
+                  <option class="elements" value="Tanzania, United Republic of">
+                    Tanzania, United Republic of
+                  </option>
+                  <option class="elements" value="Thailand">Thailand</option>
+                  <option class="elements" value="Timor-leste">
+                    Timor-leste
+                  </option>
+                  <option class="elements" value="Togo">Togo</option>
+                  <option class="elements" value="Tokelau">Tokelau</option>
+                  <option class="elements" value="Tonga">Tonga</option>
+                  <option class="elements" value="Trinidad and Tobago">
+                    Trinidad and Tobago
+                  </option>
+                  <option class="elements" value="Tunisia">Tunisia</option>
+                  <option class="elements" value="Turkey">Turkey</option>
+                  <option class="elements" value="Turkmenistan">
+                    Turkmenistan
+                  </option>
+                  <option class="elements" value="Turks and Caicos Islands">
+                    Turks and Caicos Islands
+                  </option>
+                  <option class="elements" value="Tuvalu">Tuvalu</option>
+                  <option class="elements" value="Uganda">Uganda</option>
+                  <option class="elements" value="Ukraine">Ukraine</option>
+                  <option class="elements" value="United Arab Emirates">
+                    United Arab Emirates
+                  </option>
+                  <option class="elements" value="United Kingdom">
+                    United Kingdom
+                  </option>
+                  <option class="elements" value="United States">
+                    United States
+                  </option>
+                  <option
+                    class="elements"
+                    value="United States Minor Outlying Islands"
+                  >
+                    United States Minor Outlying Islands
+                  </option>
+                  <option class="elements" value="Uruguay">Uruguay</option>
+                  <option class="elements" value="Uzbekistan">
+                    Uzbekistan
+                  </option>
+                  <option class="elements" value="Vanuatu">Vanuatu</option>
+                  <option class="elements" value="Venezuela">Venezuela</option>
+                  <option class="elements" value="Viet Nam">Viet Nam</option>
+                  <option class="elements" value="British Virgin Islands">
+                    Virgin Islands, British
+                  </option>
+                  <option class="elements" value="Virgin Islands, U.S.">
+                    Virgin Islands, U.S.
+                  </option>
+                  <option class="elements" value="Wallis and Futuna">
+                    Wallis and Futuna
+                  </option>
+                  <option class="elements" value="Western Sahara">
+                    Western Sahara
+                  </option>
+                  <option class="elements" value="Yemen">Yemen</option>
+                  <option class="elements" value="Zambia">Zambia</option>
+                  <option class="elements" value="Zimbabwe">Zimbabwe</option>
+                </select>
+              </div>
+            </div>
+
+            <div id="ifYes" class="form-inner__item" style="display: none">
+              <div class="form-inner__item--full">
+                <label for="state_required"
+                  >State/Region<span class="form-required">*</span></label
+                >
+                <select
+                  id="state_required"
+                  class="invalid error"
+                  name="cf_1137"
+                >
+                  <option
+                    class="choose_elements"
+                    value=""
+                    disabled=""
+                    selected=""
+                  >
+                    Please Select State/Region*
+                  </option>
+                  <option class="usa_state elements" value="Alabama">
+                    Alabama
+                  </option>
+                  <option class="usa_state elements" value="Alaska">
+                    Alaska
+                  </option>
+                  <option class="usa_state elements" value="Arizona">
+                    Arizona
+                  </option>
+                  <option class="usa_state elements" value="Arkansas">
+                    Arkansas
+                  </option>
+                  <option class="usa_state elements" value="California">
+                    California
+                  </option>
+                  <option class="usa_state elements" value="Colorado">
+                    Colorado
+                  </option>
+                  <option class="usa_state elements" value="Connecticut">
+                    Connecticut
+                  </option>
+                  <option class="usa_state elements" value="Delaware">
+                    Delaware
+                  </option>
+                  <option
+                    class="usa_state elements"
+                    value="District of Columbia"
+                  >
+                    District of Columbia
+                  </option>
+                  <option class="usa_state elements" value="Florida">
+                    Florida
+                  </option>
+                  <option class="usa_state elements" value="Georgia">
+                    Georgia
+                  </option>
+                  <option class="usa_state elements" value="Hawaii">
+                    Hawaii
+                  </option>
+                  <option class="usa_state elements" value="Idaho">
+                    Idaho
+                  </option>
+                  <option class="usa_state elements" value="Illinois">
+                    Illinois
+                  </option>
+                  <option class="usa_state elements" value="Indiana">
+                    Indiana
+                  </option>
+                  <option class="usa_state elements" value="Iowa">Iowa</option>
+                  <option class="usa_state elements" value="Kansas">
+                    Kansas
+                  </option>
+                  <option class="usa_state elements" value="Kentucky">
+                    Kentucky
+                  </option>
+                  <option class="usa_state elements" value="Louisiana">
+                    Louisiana
+                  </option>
+                  <option class="usa_state elements" value="Maine">
+                    Maine
+                  </option>
+                  <option class="usa_state elements" value="Maryland">
+                    Maryland
+                  </option>
+                  <option class="usa_state elements" value="Massachusetts">
+                    Massachusetts
+                  </option>
+                  <option class="usa_state elements" value="Michigan">
+                    Michigan
+                  </option>
+                  <option class="usa_state elements" value="Minnesota">
+                    Minnesota
+                  </option>
+                  <option class="usa_state elements" value="Mississippi">
+                    Mississippi
+                  </option>
+                  <option class="usa_state elements" value="Missouri">
+                    Missouri
+                  </option>
+                  <option class="usa_state elements" value="Montana">
+                    Montana
+                  </option>
+                  <option class="usa_state elements" value="Nebraska">
+                    Nebraska
+                  </option>
+                  <option class="usa_state elements" value="Nevada">
+                    Nevada
+                  </option>
+                  <option class="usa_state elements" value="New Hampshire">
+                    New Hampshire
+                  </option>
+                  <option class="usa_state elements" value="New Jersey">
+                    New Jersey
+                  </option>
+                  <option class="usa_state elements" value="New Mexico">
+                    New Mexico
+                  </option>
+                  <option class="usa_state elements" value="New York">
+                    New York
+                  </option>
+                  <option class="usa_state elements" value="North Carolina">
+                    North Carolina
+                  </option>
+                  <option class="usa_state elements" value="North Dakota">
+                    North Dakota
+                  </option>
+                  <option class="usa_state elements" value="Ohio">Ohio</option>
+                  <option class="usa_state elements" value="Oklahoma">
+                    Oklahoma
+                  </option>
+                  <option class="usa_state elements" value="Oregon">
+                    Oregon
+                  </option>
+                  <option class="usa_state elements" value="Pennsylvania">
+                    Pennsylvania
+                  </option>
+                  <option class="usa_state elements" value="Puerto Rico">
+                    Puerto Rico
+                  </option>
+                  <option class="usa_state elements" value="Rhode Island">
+                    Rhode Island
+                  </option>
+                  <option class="usa_state elements" value="South Carolina">
+                    South Carolina
+                  </option>
+                  <option class="usa_state elements" value="South Dakota">
+                    South Dakota
+                  </option>
+                  <option class="usa_state elements" value="Tennessee">
+                    Tennessee
+                  </option>
+                  <option class="usa_state elements" value="Texas">
+                    Texas
+                  </option>
+                  <option class="usa_state elements" value="Utah">Utah</option>
+                  <option class="usa_state elements" value="Vermont">
+                    Vermont
+                  </option>
+                  <option class="usa_state elements" value="Virginia">
+                    Virginia
+                  </option>
+                  <option class="usa_state elements" value="Washington">
+                    Washington
+                  </option>
+                  <option class="usa_state elements" value="West Virginia">
+                    West Virginia
+                  </option>
+                  <option class="usa_state elements" value="Wisconsin">
+                    Wisconsin
+                  </option>
+                  <option class="usa_state elements" value="Wyoming">
+                    Wyoming
+                  </option>
+
+                  <option class="canadian_province elements" value="Alberta">
+                    Alberta
+                  </option>
+                  <option
+                    class="canadian_province elements"
+                    value="British Columbia"
+                  >
+                    British Columbia
+                  </option>
+                  <option class="canadian_province elements" value="Manitoba">
+                    Manitoba
+                  </option>
+                  <option
+                    class="canadian_province elements"
+                    value="New Brunswick"
+                  >
+                    New Brunswick
+                  </option>
+                  <option
+                    class="canadian_province elements"
+                    value="Newfoundland and Labrador"
+                  >
+                    Newfoundland and Labrador
+                  </option>
+                  <option
+                    class="canadian_province elements"
+                    value="Northwest Territories"
+                  >
+                    Northwest Territories
+                  </option>
+                  <option
+                    class="canadian_province elements"
+                    value="Nova Scotia"
+                  >
+                    Nova Scotia
+                  </option>
+                  <option class="canadian_province elements" value="Nunavut">
+                    Nunavut
+                  </option>
+                  <option class="canadian_province elements" value="Ontario">
+                    Ontario
+                  </option>
+                  <option
+                    class="canadian_province elements"
+                    value="Prince Edward Island"
+                  >
+                    Prince Edward Island
+                  </option>
+                  <option class="canadian_province elements" value="Quebec">
+                    Quebec
+                  </option>
+                  <option
+                    class="canadian_province elements"
+                    value="Saskatchewan"
+                  >
+                    Saskatchewan
+                  </option>
+                  <option
+                    class="canadian_province elements"
+                    value="Yukon Territories"
+                  >
+                    Yukon Territories
+                  </option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-inner__item">
+              <div class="form-inner__item--full">
+                <label>Equipment Interested In</label>
+                <input
+                  class=""
+                  name="cf_1139"
+                  type="text"
+                  placeholder="Equipment Interested In"
+                ></input>
+              </div>
+            </div>
+
+            <div class="form-inner__item">
+              <div class="form-inner__item--full">
+                <label>Additional Info</label>
+                <textarea
+                  rows="8"
+                  class=""
+                  name="description"
+                  placeholder="Additional Info"
+                ></textarea>
+              </div>
+            </div>
+            <!-- <div class="form-inner__item text-center"> -->
+            <input
+              id="my_form_send"
+              type="submit"
+              name="submit_web_form"
+              value="Get a Quote"
+              class="submit-btn btn"
+            />
+            <!-- </div> -->
+            <p class="status">Your message was successfully sending!</p>
+          </form>
+        </div>
+
+        <!--<div id="succes_message">Your message was sent successfully. Thanks</div>-->
+
+        <!-- <div class="container contact-us-wrapper">
+          <h2 class="title contact-us__title">Contact Us</h2>
+          <h2 class="contact-us__description">
+            Contact us today to learn more about Anatol’s wide range of
+            cutting-edge flash cure units and how you can start curing with
+            higher speed and efficiency than ever before!
+          </h2>
+          <form action="" class="contact-us-form" id="contactUsForm">
+            <fieldset class="form-input-wrapper">
+              <input type="text" name="firstname" placeholder="First Name*">
+              <input type="text" name="lastname" placeholder="Last Name*">
+              <input type="tel" inputmode="tel" name="phone" placeholder="Phone Number*">
+              <input type="email" inputmode="email" name="email" placeholder="Email*">
+              <input type="text" name="company" placeholder="Email*">
+              <select name="country" id=""></select>  
+            </fieldset>
+            <input type="text" name="interestedIn" id=""></input>
+            <textarea
+              name="description"
+              id=""
+              cols="30"
+              rows="6"
+              placeholder="Additional info.."
+            ></textarea>
+            <input
+              type="submit"
+              value="Send a quote"
+              class="button button-submit"
+            />
+          </form>
+        </div> -->
       </section>
     </main>
 
     <footer class="footer" id="footer">
-      <div class="footer-wrapper">
-        <ul class="social-menu">
-          <li class="social-menu__item">
-            <a href="#" class="social-menu__link"></a>
-          </li>
-          <li class="social-menu__item">
-            <a href="#" class="social-menu__link"></a>
-          </li>
-          <li class="social-menu__item">
-            <a href="#" class="social-menu__link"></a>
-          </li>
-          <li class="social-menu__item">
-            <a href="#" class="social-menu__link"></a>
-          </li>
-        </ul>
+      <div class="container footer--wrapper">
+        <div class="footer__item widget-1">
+          <a class="footer-logo img-wrapper logo" href="https://anatol.com">
+           <img src="./assets/img/anatol-logo-red.svg" alt="">
+          </a>
+        </div>
+
+        <div class="footer__item widget-2">
+          <ul class="social-links">
+            <li>
+              <a
+                target="_blank"
+                href="https://www.facebook.com/AnatolEquipment/"
+              >
+                <!--?xml version="1.0"?--><svg
+                  fill="#ffffff"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 30 30"
+                  width="30px"
+                  height="30px"
+                >
+                  <path
+                    d="M24,4H6C4.895,4,4,4.895,4,6v18c0,1.105,0.895,2,2,2h10v-9h-3v-3h3v-1.611C16,9.339,17.486,8,20.021,8 c1.214,0,1.856,0.09,2.16,0.131V11h-1.729C19.376,11,19,11.568,19,12.718V14h3.154l-0.428,3H19v9h5c1.105,0,2-0.895,2-2V6 C26,4.895,25.104,4,24,4z"
+                  ></path>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a
+                target="_blank"
+                href="https://www.instagram.com/anatolequipment/"
+              >
+                <!--?xml version="1.0"?--><svg
+                  fill="#ffffff"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 30 30"
+                  width="30px"
+                  height="30px"
+                >
+                  <path
+                    d="M 9.9980469 3 C 6.1390469 3 3 6.1419531 3 10.001953 L 3 20.001953 C 3 23.860953 6.1419531 27 10.001953 27 L 20.001953 27 C 23.860953 27 27 23.858047 27 19.998047 L 27 9.9980469 C 27 6.1390469 23.858047 3 19.998047 3 L 9.9980469 3 z M 22 7 C 22.552 7 23 7.448 23 8 C 23 8.552 22.552 9 22 9 C 21.448 9 21 8.552 21 8 C 21 7.448 21.448 7 22 7 z M 15 9 C 18.309 9 21 11.691 21 15 C 21 18.309 18.309 21 15 21 C 11.691 21 9 18.309 9 15 C 9 11.691 11.691 9 15 9 z M 15 11 A 4 4 0 0 0 11 15 A 4 4 0 0 0 15 19 A 4 4 0 0 0 19 15 A 4 4 0 0 0 15 11 z"
+                  ></path>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/company/anatol-equipment-manufacturing-co"
+                ><svg
+                  fill="#ffffff"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 32 32"
+                  width="32px"
+                  height="32px"
+                >
+                  <path
+                    d="M 8.6425781 4 C 7.1835781 4 6 5.181625 6 6.640625 C 6 8.099625 7.182625 9.3085938 8.640625 9.3085938 C 10.098625 9.3085938 11.283203 8.099625 11.283203 6.640625 C 11.283203 5.182625 10.101578 4 8.6425781 4 z M 21.535156 11 C 19.316156 11 18.0465 12.160453 17.4375 13.314453 L 17.373047 13.314453 L 17.373047 11.310547 L 13 11.310547 L 13 26 L 17.556641 26 L 17.556641 18.728516 C 17.556641 16.812516 17.701266 14.960938 20.072266 14.960938 C 22.409266 14.960937 22.443359 17.145609 22.443359 18.849609 L 22.443359 26 L 26.994141 26 L 27 26 L 27 17.931641 C 27 13.983641 26.151156 11 21.535156 11 z M 6.3632812 11.310547 L 6.3632812 26 L 10.923828 26 L 10.923828 11.310547 L 6.3632812 11.310547 z"
+                  ></path>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a target="_blank" href="https://twitter.com/anatolequipment">
+                <!--?xml version="1.0"?--><svg
+                  fill="#ffffff"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 30 30"
+                  width="30px"
+                  height="30px"
+                >
+                  <path
+                    d="M28,6.937c-0.957,0.425-1.985,0.711-3.064,0.84c1.102-0.66,1.947-1.705,2.345-2.951c-1.03,0.611-2.172,1.055-3.388,1.295 c-0.973-1.037-2.359-1.685-3.893-1.685c-2.946,0-5.334,2.389-5.334,5.334c0,0.418,0.048,0.826,0.138,1.215 c-4.433-0.222-8.363-2.346-10.995-5.574C3.351,6.199,3.088,7.115,3.088,8.094c0,1.85,0.941,3.483,2.372,4.439 c-0.874-0.028-1.697-0.268-2.416-0.667c0,0.023,0,0.044,0,0.067c0,2.585,1.838,4.741,4.279,5.23 c-0.447,0.122-0.919,0.187-1.406,0.187c-0.343,0-0.678-0.034-1.003-0.095c0.679,2.119,2.649,3.662,4.983,3.705 c-1.825,1.431-4.125,2.284-6.625,2.284c-0.43,0-0.855-0.025-1.273-0.075c2.361,1.513,5.164,2.396,8.177,2.396 c9.812,0,15.176-8.128,15.176-15.177c0-0.231-0.005-0.461-0.015-0.69C26.38,8.945,27.285,8.006,28,6.937z"
+                  ></path>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a
+                target="_blank"
+                href="https://www.youtube.com/channel/UCcmF2LudDzC1MJyD2d7U2OA"
+              >
+                <!--?xml version="1.0"?--><svg
+                  fill="#ffffff"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 30 30"
+                  width="30px"
+                  height="30px"
+                >
+                  <path
+                    d="M 15 4 C 10.814 4 5.3808594 5.0488281 5.3808594 5.0488281 L 5.3671875 5.0644531 C 3.4606632 5.3693645 2 7.0076245 2 9 L 2 15 L 2 15.001953 L 2 21 L 2 21.001953 A 4 4 0 0 0 5.3769531 24.945312 L 5.3808594 24.951172 C 5.3808594 24.951172 10.814 26.001953 15 26.001953 C 19.186 26.001953 24.619141 24.951172 24.619141 24.951172 L 24.621094 24.949219 A 4 4 0 0 0 28 21.001953 L 28 21 L 28 15.001953 L 28 15 L 28 9 A 4 4 0 0 0 24.623047 5.0546875 L 24.619141 5.0488281 C 24.619141 5.0488281 19.186 4 15 4 z M 12 10.398438 L 20 15 L 12 19.601562 L 12 10.398438 z"
+                  ></path>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div
+          id="text-4"
+          class="footer__item footer-buttons widget-3 widget_text"
+        >
+          <a
+            href="https://anatol.com"
+            class="button footer-buttons__item"
+            target="_blank"
+            >LEARN MORE</a
+          >
+          <a
+            href="https://anatol.com/where-to-buy/"
+            class="button footer-buttons__item"
+            target="_blank"
+            >WHERE TO BUY</a
+          >
+        </div>
       </div>
-      <p class="copyright">&copy; Anatol Equipment 2018-2023</p>
+
+      <p class="copyright">
+        Copyright © 2021 Anatol Equipment Manufacturing Co. All Rights Reserved.
+      </p>
     </footer>
 
     <a id="buttonScrollTop" class="button-scroll-top" href="#">
@@ -146,10 +1527,47 @@
       </svg>
     </a>
 
+    <div class="cursor">
+      <div class="cursor-inner">
+        <div class="cursor-text" data-splitting>- Get - out - of - the - Dark</div>
+      </div>
+    </div>
+
+    <script>
+      function yesnoCheck(that) {
+        if (that.value == "United States") {
+          document.getElementById("ifYes").style.display = "block";
+          document
+            .getElementById("state_required")
+            .setAttribute("required", "");
+          document
+            .querySelectorAll(".usa_state")
+            .forEach((item) => (item.style.display = "block"));
+          document
+            .querySelectorAll(".canadian_province")
+            .forEach((item) => (item.style.display = "none"));
+        } else if (that.value == "Canada") {
+          document.getElementById("ifYes").style.display = "block";
+          document
+            .querySelectorAll(".usa_state")
+            .forEach((item) => (item.style.display = "none"));
+          document
+            .querySelectorAll(".canadian_province")
+            .forEach((item) => (item.style.display = "block"));
+        } else {
+          document.getElementById("ifYes").style.display = "none";
+          document.getElementById("state_required").removeAttribute("required");
+        }
+      }
+    </script>
+
+    <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollToPlugin.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
     <script src="./assets/js/lib/swiper-bundle.min.js"></script>
+
+    <script src="./assets/js/modules/mobileMenu.js"></script>
     <script src="./assets/js/main.js"></script>
   </body>
 </html>

@@ -1,4 +1,5 @@
 window.addEventListener("DOMContentLoaded", (e) => {
+  // gsap.registerPlugin(ScrollTrigger);
   const cursorInit = () => {
     Splitting();
     let cursor = document.querySelector(".cursor"),
@@ -56,6 +57,33 @@ window.addEventListener("DOMContentLoaded", (e) => {
     }
   };
   cursorInit();
+
+  const washerInit = () => {
+    let washer = document.querySelector(".hero");
+
+    // ScrollTrigger.defaults({
+    //   markers: true,
+    // });
+    gsap.fromTo(
+      washer,
+      {
+        clipPath: "circle(0% at 50% 50%)",
+      },
+      {
+        clipPath: "circle(100% at 50% 50%)",
+        ease: Power3.easeOut,
+        duration: 2,
+        scrollTrigger: {
+          trigger: washer,
+          scrub: 3,
+          start: "top center",
+          end: "top center-=300",
+        },
+      }
+    );
+  };
+
+  washerInit();
 
   //   let sections = gsap.utils.toArray(".js-section");
 

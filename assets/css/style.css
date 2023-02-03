@@ -222,12 +222,12 @@ section {
   align-items: center;
 }
 
-section:nth-child(2) {
+/* section:nth-child(2) {
   background-color: var(--accent-color);
 }
 section:nth-child(3) {
   background-color: blue;
-}
+} */
 /* section:nth-child(4) {
   background-color: blueviolet;
 } */
@@ -257,7 +257,7 @@ section:nth-child(3) {
 }
 
 .title-caption {
-  font-size: max(1.75vw, 32px);
+  font-size: max(1.75vw, 1.5rem);
   position: absolute;
   top: 0;
   left: 0;
@@ -271,7 +271,7 @@ section:nth-child(3) {
 }
 
 .title-caption--larger {
-  font-size: max(3.5vw, 46px);
+  font-size: max(3.5vw, 4rem);
 }
 
 .button {
@@ -288,7 +288,8 @@ section:nth-child(3) {
   background-color: var(--accent-color);
   border-radius: 5px;
   color: var(--main-color);
-  font-size: max(0.9vw, 14px);
+  font-size: max(1vw, 14px);
+  font-family: var(--base-font-family);
   cursor: pointer;
 }
 
@@ -424,13 +425,13 @@ section:nth-child(3) {
 /* Footer */
 
 .footer {
-  /* position: fixed;
+  position: fixed;
   left: 0;
-  bottom: 0; */
+  bottom: 0;
   width: 100%;
   min-height: 20vh;
   margin-top: auto;
-  /* z-index: 0; */
+  z-index: 0;
   background-color: #000000;
   /* background: var(--base-color); */
   display: flex;
@@ -557,10 +558,18 @@ section:nth-child(3) {
   z-index: 99;
 }
 
+.button-scroll-top svg {
+  transition: fill var(--base-transition);
+}
+
+.button-scroll-top:is(:hover, :active, :focus) svg {
+  fill: var(--accent-color);
+}
+
 /* Sliders */
 
 .swiper-slide {
-  /* cursor: grab; */
+  cursor: grab;
   width: 100%;
   min-height: 100vh;
 
@@ -590,12 +599,16 @@ section:nth-child(3) {
 }
 
 .product {
-  padding: 10vh 8.5vw;
-  gap: max(5vw, 2.5rem);
-  align-items: flex-start;
-  display: flex;
+  padding: max(15vh, 5rem) 0;
+  gap: max(7vw, 5rem) max(2vw, 1.5rem);
   position: relative;
-  min-height: 100vh;
+  /* min-height: 100vh; */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* grid-template-rows: max(10vh, 5rem) 1fr; */
+  grid-template-rows: repeat(2, auto);
+  /* display: flex;
+  align-items: flex-start; */
 }
 
 /* Product-thumb */
@@ -604,18 +617,29 @@ section:nth-child(3) {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 50%;
+  /* width: 50%;
   position: absolute;
   top: 0;
   right: 0;
-  transform: translate(25%, 0);
-  z-index: 3;
+  transform: translate(25%, 0); */
+  /* z-index: 3; */
+  transform: translate(30%, 0);
+  width: 100%;
 }
 
+/* Product description */
+.product-description {
+  display: flex;
+  flex-direction: column;
+  gap: max(2.5vh, 1.5rem);
+  grid-column: 1/2;
+  grid-row: 1/3;
+  justify-content: flex-start;
+}
 /* Title */
 .title {
   color: #ab0101;
-  font-size: 22px;
+  font-size: max(1.35vw, 16px);
   z-index: 3;
   text-align: left;
   line-height: 1;
@@ -623,18 +647,18 @@ section:nth-child(3) {
 .title--larger {
   font-family: var(--base-font-family);
   font-weight: normal;
-  font-size: 160px;
+  font-size: max(8.5vw, 10rem);
   mix-blend-mode: overlay;
+  line-height: 1;
 }
 
 /* Advantages List */
 
 .advantages-list {
   display: flex;
-  gap: 1.5rem;
-  padding: 7.5rem 0;
+  gap: max(1vw, 0.5rem);
   align-items: flex-start;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 
 .advantages-list__item {
@@ -645,9 +669,9 @@ section:nth-child(3) {
   text-align: center;
   /* width: 7.5rem;
   height: 7.5rem; */
-  padding: 1.25rem 0.5rem;
+  padding: max(0.5vw, 0.25rem);
   z-index: 100;
-  font-size: 14px;
+  font-size: max(0.65vw, 10px);
   color: var(--accent-color);
   background-color: var(--main-color);
   border-radius: 5px;
@@ -660,10 +684,13 @@ section:nth-child(3) {
   align-items: flex-end;
   gap: 2rem;
   align-self: flex-end;
+  justify-self: flex-end;
+  /* grid-row: 1/3;
+  grid-column: 2/3; */
 }
 
 .product-info__item {
-  font-size: 20px;
+  font-size: max(1vw, 16px);
   text-align: right;
   /* font-family: "Montserrat", sans-serif; */
   font-family: var(--base-font-family);
@@ -671,7 +698,7 @@ section:nth-child(3) {
 }
 
 .product-info__item--larger {
-  font-size: 4.5rem;
+  font-size: max(2.5vw, 3.25rem);
   color: var(--accent-color);
 }
 
@@ -688,11 +715,19 @@ section:nth-child(3) {
 }
 
 .hero-legend__caption {
-  font-size: 20rem;
+  font-size: max(12vw, 10rem);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  line-height: max(10vw, 8rem);
+}
+
+.hero-legend__caption .char {
+  transform: translateY(15rem);
+  transition: transform 0.5s;
+  opacity: 0;
 }
 
 .hero-legend__description {
-  font-size: 40px;
+  font-size: max(2vw, 2rem);
   font-family: var(--base-font-family);
   text-align: right;
   width: 100%;
@@ -708,6 +743,26 @@ section:nth-child(3) {
   display: flex;
   flex-direction: column;
   transition: all 0.5s ease-in-out;
+  position: relative;
+}
+
+.washer::before {
+  content: "暗闇から抜け出す";
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: max(5vw, 5rem);
+  top: 0%;
+  left: 59%;
+  transform-origin: center;
+  /* rotate: -90deg; */
+  writing-mode: vertical-lr;
+  transform: translate(-50%, 0);
+  /* color: rgb(255 255 255 / 50%); */
+  height: 100%;
+  color: var(--accent-color);
 }
 
 /* .washer:hover {
@@ -726,15 +781,16 @@ section:nth-child(3) {
 .washer__item {
   width: 52.5%;
   color: var(--main-color);
+  z-index: 2;
 }
 
 .washer-caption {
   text-align: center;
-  font-size: 12.5rem;
+  font-size: max(6.5vw, 5.75rem);
 }
 
 .washer-legend {
-  font-size: 2.5rem;
+  font-size: max(1.35vw, 1.5rem);
   padding: 0 1.5rem;
 }
 
@@ -749,10 +805,10 @@ section:nth-child(3) {
 .hero-wrapper {
   display: grid;
   grid-template-columns: 35% 1fr;
-  grid-template-rows: max(17.5vh, 7.5rem) auto;
+  grid-template-rows: max(17.5vh, 5rem) max(5vh, 2.5rem) auto;
   gap: 5vh 5vw;
   justify-content: center;
-  padding: 20vh 0 20vh 8.5vw;
+  padding: 20vh 0 10vh 8.5vw;
   min-height: auto;
 }
 
@@ -761,7 +817,7 @@ section:nth-child(3) {
 }
 
 .hero__thumb {
-  grid-row: 1/3;
+  grid-row: 1/4;
   grid-column: 2/3;
   width: 100%;
   height: 100%;
@@ -771,9 +827,14 @@ section:nth-child(3) {
   overflow: hidden;
 }
 
-.hero__thumb img {
+.hero__thumb picture {
   /* width: 100%; */
   object-fit: contain;
+}
+
+.button-download {
+  max-width: 40%;
+  align-self: flex-start;
 }
 
 /* Image List */
@@ -787,24 +848,22 @@ section:nth-child(3) {
   position: absolute;
 }
 
-.img-list img {
+.img-list picture {
   position: absolute;
 }
-
-.img-list img:nth-child(1) {
-  left: 12.5%;
-  bottom: 0;
-  transform: translate(-50%, -50%);
-  z-index: 3;
-  width: 25%;
-}
-
-.img-list img:nth-child(2) {
+.img-list picture:nth-child(2) {
   top: 0;
-  width: 35%;
+  width: 45%;
 
   left: 0;
-  transform: translate(15%, 0);
+  transform: translate(10%, 15%);
+}
+.img-list picture:nth-child(1) {
+  left: 12.5%;
+  bottom: 0;
+  transform: translate(-41.5%, 0);
+  z-index: 3;
+  width: 30%;
 }
 
 /* Advantages Section */
@@ -817,6 +876,22 @@ section:nth-child(3) {
   justify-items: center;
   max-width: 82.5vw;
   position: relative;
+}
+
+.advantages::after {
+  content: "信頼性";
+  font-size: max(10vw, 10rem);
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--accent-color);
+  top: 0;
+  left: 50%;
+  writing-mode: vertical-lr;
+
+  transform: translate(-60%, -25%);
 }
 
 .advantages__item {
@@ -899,7 +974,7 @@ section:nth-child(3) {
 .advantages-info {
   display: flex;
   /* font-family: "Montserrat", sans-serif; */
-  font-size: 2.5rem;
+  font-size: max(1.35vw, 1.5rem);
   color: var(--base-color);
   margin: auto;
   padding: 0 3.5rem;
@@ -907,7 +982,7 @@ section:nth-child(3) {
 }
 
 .advantages-info--larger {
-  font-size: 5rem;
+  font-size: max(2.75vw, 2.5rem);
   align-items: flex-end;
   color: var(--accent-color);
   text-align: left;
@@ -1017,18 +1092,20 @@ section:nth-child(3) {
   background-color: var(--accent-color);
 }
 
-/* .video-list::before,
-.video-list::after {
-  content: "";
-  width: 100%;
-  height: 30px;
+.video-list::before {
+  content: "品質";
   position: absolute;
-  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  /* width: 100%; */
+  bottom: 0;
   right: 0;
-  top: 20%;
-  background-color: var(--accent-color);
-  rotate: -5deg;
-} */
+  font-size: max(15vw, 7.5rem);
+  color: var(--main-color);
+  transform: translate(10%, 15%);
+}
 
 .video-list-wrapper {
   display: grid;
@@ -1041,7 +1118,7 @@ section:nth-child(3) {
 
 .video {
   position: relative;
-  width: 80%;
+  width: 100%;
   /* height: 0; */
   /* padding: 28.25%; */
   background-color: #333;
@@ -1107,4 +1184,67 @@ section:nth-child(3) {
 
 .video--enabled .video__button {
   display: flex;
+}
+
+/* Benefits section */
+
+.benefits {
+  min-height: auto;
+}
+
+.benefits-wrapper {
+  display: grid;
+  grid-template-columns: 10% 1fr;
+  gap: max(5vw, 2.5rem);
+  justify-items: flex-start;
+  width: 100%;
+  margin: max(10vh, 2.5rem) auto;
+}
+
+.benefits-tabs {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: max(5vh, 2.5rem);
+}
+
+.benefits-tabs__item {
+  width: 10rem;
+  height: 10rem;
+  cursor: pointer;
+  transition: fill var(--base-transition);
+}
+
+.benefits-tabs__item--active {
+  fill: var(--accent-color);
+}
+
+.benefits-tabs__item:is(:hover, :active, :focus) {
+  fill: var(--accent-color);
+}
+
+/* Benefits List Items */
+
+.benefits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.benefit {
+  display: flex;
+  flex-direction: column;
+  gap: max(2.5vh, 1rem);
+}
+
+.benefit.benefit--hidden {
+  display: none;
+}
+
+.benefit__caption {
+  font-size: 3.5rem;
+}
+
+.benefit__description {
+  font-size: 2rem;
 }

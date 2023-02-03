@@ -1,5 +1,45 @@
 window.addEventListener("DOMContentLoaded", (e) => {
-  // gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(ScrollTrigger);
+
+  const initHero = () => {
+  const hero = document.querySelector(".hero-legend"),
+  
+  const tlHeroCaption = gsap.timeline();
+
+  // gsap.to('.hero-legend__caption', {
+  //   y: 0,
+  //   stagger: 0.05,
+  //   delay: 0.2,
+  //   duration: .1
+  // })
+  }
+  
+  initHero();
+
+  const initFooter = () => {
+    const footer = document.querySelector(".footer");
+    const trigger = document.querySelector(".contact-us");
+    const tlFooter = gsap.timeline();
+
+    tlFooter.fromTo(
+      footer,
+      {
+        opacity: 0,
+      },
+      {
+        opacity: 1,
+        ease: Power3.easeOut,
+        duration: 2,
+        scrollTrigger: {
+          trigger: trigger,
+          scrub: 3,
+          start: "top center",
+          end: "top center-=300",
+        },
+      }
+    );
+  };
+
   const cursorInit = () => {
     Splitting();
     let cursor = document.querySelector(".cursor"),
@@ -37,7 +77,7 @@ window.addEventListener("DOMContentLoaded", (e) => {
       let rotate = gsap.timeline({ repeat: -1 });
       rotate.to(cursor, {
         rotation: 360,
-        duration: 5,
+        duration: 7.5,
         ease: "none",
       });
     }
@@ -56,10 +96,9 @@ window.addEventListener("DOMContentLoaded", (e) => {
       });
     }
   };
-  cursorInit();
 
   const washerInit = () => {
-    let washer = document.querySelector(".hero");
+    let washer = document.querySelector(".product-list");
 
     // ScrollTrigger.defaults({
     //   markers: true,
@@ -68,11 +107,12 @@ window.addEventListener("DOMContentLoaded", (e) => {
       washer,
       {
         clipPath: "circle(0% at 50% 50%)",
+        duration: 5,
       },
       {
         clipPath: "circle(100% at 50% 50%)",
         ease: Power3.easeOut,
-        duration: 2,
+        duration: 5,
         scrollTrigger: {
           trigger: washer,
           scrub: 3,
@@ -83,8 +123,16 @@ window.addEventListener("DOMContentLoaded", (e) => {
     );
   };
 
+  initFooter();
+  cursorInit();
   washerInit();
 
+  window.addEventListener("resize", (e) => {
+    const productImageList = document.querySelector(".img-list");
+    if (e.innerWidth < 1080) {
+      productImageList.style.position = "relative";
+    }
+  });
   //   let sections = gsap.utils.toArray(".js-section");
 
   //   function goToSection(i) {
@@ -149,11 +197,15 @@ window.addEventListener("DOMContentLoaded", (e) => {
     const swiper = new Swiper(sliderClassName, {
       loop: true,
       effect: "fade",
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
       // simulateTouch: false,
     });
   };
 
-  let arraySliders = [".hero", ".product-list", ".section-2", ".section-3"];
+  let arraySliders = [".hero", ".product-list"];
 
   arraySliders.forEach((slider) => initSlider(slider));
 });

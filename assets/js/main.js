@@ -2,18 +2,27 @@ window.addEventListener("DOMContentLoaded", (e) => {
   gsap.registerPlugin(ScrollTrigger);
 
   const initHero = () => {
-  const hero = document.querySelector(".hero-legend"),
-  
-  const tlHeroCaption = gsap.timeline();
+    const hero = document.querySelector(".hero-legend");
 
-  // gsap.to('.hero-legend__caption', {
-  //   y: 0,
-  //   stagger: 0.05,
-  //   delay: 0.2,
-  //   duration: .1
-  // })
-  }
-  
+    const tlHeroCaption = gsap.timeline();
+
+    const heroCaption = new SplitType(".hero-legend__caption");
+    gsap.to(".hero-legend__caption .char", {
+      y: 0,
+      opacity: 1,
+      stagger: 0.05,
+      delay: 0.2,
+      duration: 0.1,
+    });
+
+    // tlHeroCaption.to(".hero-legend__caption .char", {
+    //   y: 0,
+    //   stagger: 0.05,
+    //   delay: 0.2,
+    //   duration: 0.1,
+    // });
+  };
+
   initHero();
 
   const initFooter = () => {

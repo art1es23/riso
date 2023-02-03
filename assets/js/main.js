@@ -4,26 +4,112 @@ window.addEventListener("DOMContentLoaded", (e) => {
   const initHero = () => {
     const hero = document.querySelector(".hero-legend");
 
-    const tlHeroCaption = gsap.timeline();
-
     const heroCaption = new SplitType(".hero-legend__caption");
-    gsap.to(".hero-legend__caption .char", {
-      y: 0,
-      opacity: 1,
-      stagger: 0.05,
-      delay: 0.2,
-      duration: 0.1,
-    });
 
-    // tlHeroCaption.to(".hero-legend__caption .char", {
-    //   y: 0,
-    //   stagger: 0.05,
-    //   delay: 0.2,
-    //   duration: 0.1,
-    // });
+    let productList = document.querySelector(".product-list");
+
+    const tlHeroCaption = gsap.timeline();
+    tlHeroCaption
+      .fromTo(
+        ".header",
+        {
+          opacity: 0,
+        },
+        {
+          opacity: 1,
+          delay: 0.5,
+        }
+      )
+      .to(".hero-legend__caption .char", {
+        y: 0,
+        opacity: 1,
+        stagger: 0.05,
+        delay: 0.2,
+        duration: 0.1,
+      })
+      .fromTo(
+        ".hero-legend__description",
+        {
+          opacity: 0,
+        },
+        {
+          opacity: 1,
+        }
+      )
+      .fromTo(".washer__item", { opacity: 0 }, { opacity: 1 })
+      .fromTo(
+        ".product__title",
+        { opacity: 0, xPercent: -10 },
+        { opacity: 1, xPercent: 0 }
+      )
+      .fromTo(
+        ".product-thumb",
+        { opacity: 0, xPercent: 100 },
+        { opacity: 1, xPercent: 0 }
+      )
+      .fromTo(
+        ".advantages-list__item",
+        { x: -50, opacity: 0 },
+        { x: 0, opacity: 1, stagger: 0.1, delay: 0.2, duration: 0.4 }
+      )
+      .fromTo(".img-list__item--bottom", { opacity: 0 }, { opacity: 1 })
+      .fromTo(".img-list__item--top", { opacity: 0 }, { opacity: 1 })
+      .fromTo(
+        ".product-info__item",
+        { xPercent: 150, opacity: 0 },
+        { xPercent: 0, opacity: 1, stagger: 0.1, delay: 0.2, duration: 0.4 }
+      );
+    // .fromTo(".product__title", { opacity: 0, x: -100 }, { opacity: 1, x: 0 });
+    // .fromTo(
+    //   productList,
+    //   5,
+    //   {
+    //     clipPath: "circle(0% at 50% 50%)",
+    //     // duration: 5,
+    //   },
+    //   {
+    //     clipPath: "circle(100% at 50% 50%)",
+    //     ease: Power3.easeOut,
+    //     // duration: 5,
+    //     scrollTrigger: {
+    //       trigger: productList,
+    //       scrub: 3,
+    //       start: "top center",
+    //       end: "top center-=300",
+    //     },
+    //   }
+    // );
   };
 
-  initHero();
+  // const initWasher = () => {
+  //   let washer = document.querySelector(".washer");
+  //   let productList = document.querySelector(".product-list");
+
+  //   let tlWasher = gsap.timeline();
+
+  //   tlWasher
+  //     .fromTo(washer, { opacity: 0 }, { opacity: 1, delay: 1.5 })
+  //     .fromTo(".product__title", { x: -100 }, { x: 0 })
+  //     .fromTo(
+  //       productList,
+  //       5,
+  //       {
+  //         clipPath: "circle(0% at 50% 50%)",
+  //         // duration: 5,
+  //       },
+  //       {
+  //         clipPath: "circle(100% at 50% 50%)",
+  //         ease: Power3.easeOut,
+  //         // duration: 5,
+  //         scrollTrigger: {
+  //           trigger: productList,
+  //           scrub: 3,
+  //           start: "top center",
+  //           end: "top center-=300",
+  //         },
+  //       }
+  //     );
+  // };
 
   const initFooter = () => {
     const footer = document.querySelector(".footer");
@@ -106,35 +192,10 @@ window.addEventListener("DOMContentLoaded", (e) => {
     }
   };
 
-  const washerInit = () => {
-    let washer = document.querySelector(".product-list");
-
-    // ScrollTrigger.defaults({
-    //   markers: true,
-    // });
-    gsap.fromTo(
-      washer,
-      {
-        clipPath: "circle(0% at 50% 50%)",
-        duration: 5,
-      },
-      {
-        clipPath: "circle(100% at 50% 50%)",
-        ease: Power3.easeOut,
-        duration: 5,
-        scrollTrigger: {
-          trigger: washer,
-          scrub: 3,
-          start: "top center",
-          end: "top center-=300",
-        },
-      }
-    );
-  };
-
+  initHero();
+  // initWasher();
   initFooter();
   cursorInit();
-  washerInit();
 
   window.addEventListener("resize", (e) => {
     const productImageList = document.querySelector(".img-list");
